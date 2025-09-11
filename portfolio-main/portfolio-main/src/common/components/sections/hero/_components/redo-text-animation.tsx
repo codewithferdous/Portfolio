@@ -1,0 +1,66 @@
+"use client";
+
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect } from "react";
+
+export interface IRedoTextAnimationProps {
+  delay: number;
+}
+
+export default function RedoTextAnimation({ delay }: IRedoTextAnimationProps) {
+  const textIndex = useMotionValue(0);
+
+  const texts = [
+   "I’m an AI explorer, solving challenges every day!",
+"Data and algorithms are my playground to innovate!",
+"Simplicity with intelligence makes design truly elegant.",
+"Debugging models is like finding hidden data patterns!",
+"Scalable AI solutions are my superpower always.",
+"Machine learning is the poetry of problem-solving.",
+"Collaboration builds smarter systems faster and better!",
+"Refining models is like sharpening digital intelligence.",
+"Continuous learning keeps me ahead in ML and AI.",
+"Elegant AI solutions define impactful innovation everywhere!",
+
+
+  ];
+
+  const baseText = useTransform(textIndex, (latest) => texts[latest] || "");
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+  const displayText = useTransform(rounded, (latest) =>
+    baseText.get().slice(0, latest),
+  );
+  const updatedThisRound = useMotionValue(true);
+
+  useEffect(() => {
+    animate(count, 60, {
+      type: "tween",
+      delay: delay,
+      duration: 5,
+      ease: "easeIn",
+      repeat: Infinity,
+      repeatType: "reverse",
+      repeatDelay: 1,
+      onUpdate(latest) {
+        if (updatedThisRound.get() === true && latest > 0) {
+          updatedThisRound.set(false);
+        } else if (updatedThisRound.get() === false && latest === 0) {
+          if (textIndex.get() === texts.length - 1) {
+            textIndex.set(0);
+          } else {
+            textIndex.set(textIndex.get() + 1);
+          }
+          updatedThisRound.set(true);
+        }
+      },
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return (
+    <motion.span className="h-32 max-w-96 bg-lightBeige text-[1.2rem] font-bold dark:bg-darkBeige md:text-[1.5rem] lg:text-[1.7rem]">
+      {displayText}
+    </motion.span>
+  );
+}
