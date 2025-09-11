@@ -12,7 +12,7 @@ import { ModeToggle } from '@/common/theme/mode-toggler';
 export const metadata: Metadata = {
   title: 'Ferdous| Portfolio',
   description:
-    'Check out modern and stylish porfolio of an experienced Web Developer Maksym Azimov! Built using TypeScript, Next.js 14, Framaer Motion and Tailwind CSS.',
+    'I’m Ferdous Gulzar AI & ML Engineerpassionate about designing intelligent, scalable systems that create real-world impact. My focus lies in blending',
 };
 
 const fontMontserrat = FontMontserrat({
