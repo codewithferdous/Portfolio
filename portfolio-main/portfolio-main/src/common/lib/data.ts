@@ -18,7 +18,7 @@ import filedriveImg from '@/../public/images/file-drive.png';
 import projectmanagementImg from '@/../public/images/project-management.png';
 import reactfoodImg from '@/../public/images/react-food.png';
  import hepta from '@/../public/images/heptaPic.jpg';
-// import portfolioImg from '@/../public/images/portfolio.png';
+import portfolioImg from '@/../public/images/portfolio.png';
 // import auditMasterImg from '@/../public/images/audit-master.png';
 // import accountingImg from '@/../public/images/accounting.jpg';
 // import archeryPic from '@./..public/images/archeryPic.jpeg';
@@ -73,7 +73,8 @@ export const images = {
   amazone,
   huffman,
   currency,
-  rock
+  rock,
+  portfolioImg
 };
 
 export const projectsData = [
@@ -85,6 +86,15 @@ export const projectsData = [
   imageUrl: hepta, // replace with your imported image
   link: 'https://github.com/codewithferdous/WEBFrontEnd_Projects/tree/main/Html%20Css%20javaScript%20projects/hepta/hepta', // add GitHub or demo link
 },
+{
+  title: 'Portfolio',
+  description: `A personal portfolio website built with Next.js. Showcases projects, skills, and experience with a clean, modern design and responsive layout.`,
+  tags: ['Next.js', 'React', 'Tailwind CSS', 'JavaScript'],
+  category: 'Web Dev',
+  imageUrl: portfolioImg, // replace with your imported image
+  link: 'https://github.com/codewithferdous/Portfolio/tree/main/portfolio-main/portfolio-main', // update with your actual GitHub or demo link
+},
+
   {
     title: 'Runner Game',
     description: `An endless runner game built with Unity and C#. Features dynamic obstacles, collision detection, and increasing game difficulty to test player reflexes. Includes sound effects and scoring system.`,
