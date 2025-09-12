@@ -5,7 +5,7 @@ import { Resend } from "resend";
 import ContactFormEmail from "@/common/components/sections/contact/_components/contact-form-email";
 import { getErrorMessage, validateString } from "@/common/lib/utils";
 
-const resend = new Resend("re_3yt5QPiv_7puvonwvWJR1YzAnqGY6V8MR");
+const resend = new Resend("re_V6oPZfPJ_Nxn5aVGocUaaZDLJynppWroA");
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
