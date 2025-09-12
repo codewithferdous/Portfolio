@@ -1,6 +1,6 @@
 # 🌟 Portfolio Website  
 
-!![Portfolio Banner](https://ferdous-gulzar-portfolio.vercel.app//api?type=waving&color=gradient&height=200&section=header&text=Welcome%20to%20My%20Portfolio!&fontSize=40&fontAlignY=35&animation=fadeIn)
+![Portfolio Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Welcome%20to%20My%20Portfolio!&fontSize=40&fontAlignY=35&animation=fadeIn)
 
 <p align="center">
   <em>A modern, responsive, and professional developer portfolio built with <b>Next.js, TypeScript, TailwindCSS, and Framer Motion</b>. Showcasing my projects, skills, and experience in an elegant and animated way. 🚀</em>
