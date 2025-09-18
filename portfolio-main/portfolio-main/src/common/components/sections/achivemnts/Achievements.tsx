@@ -60,7 +60,7 @@ const achievements: Achievement[] = [
     id: 2,
     title: "Campus Honor Roll Award in Fifth Semester",
     description:
-      "Recognized in the Campus Honor Roll for securing a perfect SGPA of 4.0/4.0 in the Fifth Semester (Fall 2024).",
+      "Recognized in the Campus Honor Roll for securing a perfect SGPA of 3.88/4.0 in the Fifth Semester (Fall 2024).",
     image: "./images/Campus Honor Roll Award in Fifth Semester.jpg",
     category: ["Studies"],
   },
@@ -152,7 +152,21 @@ const achievements: Achievement[] = [
     "This is to certify that Ferdous Gulzar completed an internship as a Front-End Developer from August 1, 2024 to September 1, 2024. Demonstrated exceptional dedication, technical proficiency in HTML, CSS, JavaScript, and React.js, and strong collaboration skills. Recognized for professionalism and proactive attitude. Issued by Adil Qureshi, Manager HR.",
   image: "./images/Front-End Developer.jpg",
   category: ["Internship", "Skills"],
+},{
+  "id": 14,
+  "title": "CCNA: Introduction to Networks",
+  "description": "Earned the Cisco Networking Academy CCNA: Introduction to Networks certification, demonstrating foundational knowledge in computer networking, IP addressing, subnetting, routing, switching, and network security concepts. Completed through COMSATS University Islamabad, Abbottabad Campus on 14th September 2025.",
+  "image": "./images/cnn.jpg",
+  "category": ["Studies", "Skills"]
+},{
+  "id": 15,
+  "title": "University Convocation – Usher Certificate",
+  "description": "Recognized for voluntary service as an Usher during the University Convocation ceremony at COMSATS University Islamabad, Abbottabad Campus. Demonstrated organizational, communication, and teamwork skills while assisting in event coordination and guest management.",
+  "image": "./images/ushers_img.jpg",
+  "category": ["Activities"]
 }
+
+
 
 
 
