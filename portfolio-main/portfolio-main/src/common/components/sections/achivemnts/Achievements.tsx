@@ -166,6 +166,15 @@ const achievements: Achievement[] = [
   "category": ["Activities"]
 }
 
+,
+{
+  id: 16,
+  title: "Workshop on Deep Learning and NLP",
+  description:
+    "Awarded a Certificate of Participation by the Robotics Club, COMSATS University Islamabad, for successfully participating in a workshop on Deep Learning and Natural Language Processing.",
+  image: "./images/nlp .jpg",
+  category:  ["Studies", "Skills"]
+},
 
 
 
