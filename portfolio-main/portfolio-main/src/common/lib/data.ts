@@ -11,7 +11,7 @@ import netflix from '@/../public/images/netflix.jpeg';
 import amazone from '@/../public/images/amazone.jpg';
 
 import rock from '@/../public/images/rock.png';
-
+import mediconnect from '@/../public/images/mediconnct.jpeg';
 import currency from '@/../public/images/currency.png';
 import codecrux from '@/../public/images/code ceux.png';
 import filedriveImg from '@/../public/images/file-drive.png';
@@ -74,7 +74,8 @@ export const images = {
   huffman,
   currency,
   rock,
-  portfolioImg
+  portfolioImg,
+  mediconnect
 };
 
 export const projectsData = [
@@ -86,6 +87,15 @@ export const projectsData = [
   imageUrl: hepta, // replace with your imported image
   link: 'https://github.com/codewithferdous/WEBFrontEnd_Projects/tree/main/Html%20Css%20javaScript%20projects/hepta/hepta', // add GitHub or demo link
 },
+{
+  title: 'MediConnect –  Healthcare Management System',
+  description: `MediConnect A modern healthcare management web dev  built with TypeScript and React. Features multi-role access, Supabase authentication, responsive dashboards, and a clean, interactive UI.`,
+  tags: ['TypeScript', 'React', 'Supabase', 'Multi-Role Access', 'Authentication'],
+  category: 'Web Dev',
+  imageUrl: mediconnect, // replace with your imported image
+  link: 'https://github.com/codewithferdous/MediConnect', // replace with actual repo or demo link
+},
+
 {
   title: 'Portfolio',
   description: `A personal portfolio website built with Next.js. Showcases projects, skills, and experience with a clean, modern design and responsive layout.`,
