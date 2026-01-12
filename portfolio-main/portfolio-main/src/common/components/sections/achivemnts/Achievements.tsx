@@ -174,7 +174,21 @@ const achievements: Achievement[] = [
     "Awarded a Certificate of Participation by the Robotics Club, COMSATS University Islamabad, for successfully participating in a workshop on Deep Learning and Natural Language Processing.",
   image: "./images/nlp .jpg",
   category:  ["Studies", "Skills"]
-},
+},{
+  "id": 17,
+  "title": "Campus Honor Roll Certificate 6th Semester",
+  "description": "Awarded by COMSATS University Islamabad (CUI), Abbottabad Campus in recognition of outstanding academic performance. Achieved a perfect SGPA of 4.0/4.0 in the 6th Semester (Spring 2025) of the Bachelor of Science in Software Engineering program, reflecting dedication, consistency, and academic excellence.",
+  "image": "./images/campus.jpeg",
+  "category": ["Skills", "Studies"]
+},{
+  "id": 18,
+  "title": "Demystifying Deep Learning Workshop",
+  "description": "Successfully completed a four-day intensive workshop titled \"Demystifying Deep Learning – An Autumn Workshop,\" . Gained a solid understanding of core deep learning concepts, neural networks, and real-world AI applications, enhancing analytical thinking and exposure to modern machine learning technologies.",
+  "image": "./images/deep learning.jpeg",
+  "category": ["Skills"]
+}
+
+
 
 
 
