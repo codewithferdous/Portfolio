@@ -93,7 +93,7 @@ export const projectsData = [
   tags: ['TypeScript', 'React', 'Supabase', 'Multi-Role Access', 'Authentication'],
   category: 'Web Dev',
   imageUrl: mediconnect, // replace with your imported image
-  link: 'https://github.com/codewithferdous/MediConnect', // replace with actual repo or demo link
+  link: 'https://github.com/codewithferdous/HCI/tree/main/MediConnect%20Healthcare%20Platform%20Design/MediConnect%20Healthcare%20Platform%20Design', // replace with actual repo or demo link
 },
 
 {
