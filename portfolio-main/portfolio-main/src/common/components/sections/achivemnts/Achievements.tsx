@@ -57,7 +57,7 @@ const achievements: Achievement[] = [
     category: ["Studies", "Projects"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Campus Honor Roll Award in Fifth Semester",
     description:
       "Recognized in the Campus Honor Roll for securing a perfect SGPA of 3.88/4.0 in the Fifth Semester (Fall 2024).",
@@ -66,7 +66,7 @@ const achievements: Achievement[] = [
   },
   
   {
-    id: 4,
+    id: 2,
     title: "Campus Honor Roll Award in 3rd Semester",
     description:
       "Recognized in the Campus Honor Roll for securing a perfect SGPA of 4.0/4.0 in the 3rd Semester (Fall 2023).",
@@ -138,7 +138,7 @@ const achievements: Achievement[] = [
   category: ["Activities"],
 }
 ,{
-  id: 12,
+  id: 13,
   title: "Certificate of Completion - Beginner Web Development Bootcamp",
   description:
     "This is to certify that Ferdous Gulzar has successfully completed 'The Complete Beginner Web Development Bootcamp' organized by Google Developers Group OnCampus (GDGOC), COMSATS University Abbottabad Campus during Fall 2024. The participant demonstrated dedication and commitment throughout the program. Acknowledged by Muhammad Adil Khan (Faculty Advisor), Varisha Sajjad (Lead GDGOC), and Syed Shah Hussain Badshah (Tech Lead).",
@@ -146,20 +146,29 @@ const achievements: Achievement[] = [
   category: [ "Skills","Studies"],
 }
 ,{
-  id: 13,
+  "id": 14,
+  "title": " Certificate of Completion - Introduction to AI",
+  "description": "Awarded by Google and delivered through Coursera in recognition of successful completion of the course 'Introduction to AI'. The course provided foundational knowledge of artificial intelligence concepts, applications, and real-world use cases, building a strong base for further study and practical implementation of AI technologies.",
+  "image": "./images/INTRO to ai.jpeg",
+  "category": ["Skills"]
+}
+,
+{
+  id: 15,
   title: "Certificate of Internship - Front-End Developer",
   description:
     "This is to certify that Ferdous Gulzar completed an internship as a Front-End Developer from August 1, 2024 to September 1, 2024. Demonstrated exceptional dedication, technical proficiency in HTML, CSS, JavaScript, and React.js, and strong collaboration skills. Recognized for professionalism and proactive attitude. Issued by Adil Qureshi, Manager HR.",
   image: "./images/Front-End Developer.jpg",
   category: ["Internship", "Skills"],
 },{
-  "id": 14,
+  "id": 16,
   "title": "CCNA: Introduction to Networks",
   "description": "Earned the Cisco Networking Academy CCNA: Introduction to Networks certification, demonstrating foundational knowledge in computer networking, IP addressing, subnetting, routing, switching, and network security concepts. Completed through COMSATS University Islamabad, Abbottabad Campus on 14th September 2025.",
   "image": "./images/cnn.jpg",
   "category": ["Studies", "Skills"]
-},{
-  "id": 15,
+},
+{
+  "id": 17,
   "title": "University Convocation – Usher Certificate",
   "description": "Recognized for voluntary service as an Usher during the University Convocation ceremony at COMSATS University Islamabad, Abbottabad Campus. Demonstrated organizational, communication, and teamwork skills while assisting in event coordination and guest management.",
   "image": "./images/ushers_img.jpg",
@@ -168,29 +177,35 @@ const achievements: Achievement[] = [
 
 ,
 {
-  id: 16,
+  id: 18,
   title: "Workshop on Deep Learning and NLP",
   description:
     "Awarded a Certificate of Participation by the Robotics Club, COMSATS University Islamabad, for successfully participating in a workshop on Deep Learning and Natural Language Processing.",
   image: "./images/nlp .jpg",
   category:  ["Studies", "Skills"]
 },{
-  "id": 17,
+  "id": 19,
   "title": "Campus Honor Roll Certificate 6th Semester",
   "description": "Awarded by COMSATS University Islamabad (CUI), Abbottabad Campus in recognition of outstanding academic performance. Achieved a perfect SGPA of 4.0/4.0 in the 6th Semester (Spring 2025) of the Bachelor of Science in Software Engineering program, reflecting dedication, consistency, and academic excellence.",
   "image": "./images/campus.jpeg",
   "category": ["Skills", "Studies"]
-},{
-  "id": 18,
+},
+{
+  "id": 21,
   "title": "Demystifying Deep Learning Workshop",
   "description": "Successfully completed a four-day intensive workshop titled \"Demystifying Deep Learning – An Autumn Workshop,\" . Gained a solid understanding of core deep learning concepts, neural networks, and real-world AI applications, enhancing analytical thinking and exposure to modern machine learning technologies.",
   "image": "./images/deep learning.jpeg",
   "category": ["Skills"]
 }
-
-
-
-
+,
+{
+  id: 20,
+  title: "Maximize Productivity With AI Tools",
+  description:
+    "Awarded by Google and delivered through Coursera in recognition of successful completion of the course 'Maximize Productivity With AI Tools'. The course focused on using AI-powered tools to enhance productivity, optimize workflows, and improve efficiency in academic and professional tasks.",
+  image: "./images/INTRO to ai.jpeg",
+  category: [ "Skills"],
+}
 
 
 ];
