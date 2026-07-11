@@ -2,6 +2,7 @@
 
 import About from '@/common/components/sections/about';
 import Achievements from '@/common/components/sections/achivemnts/Achievements';
+import Certificates from '@/common/components/sections/certificates/Certificates';
 import Contact from '@/common/components/sections/contact';
 import Experience from '@/common/components/sections/experience';
 import Hero from '@/common/components/sections/hero';
@@ -18,6 +19,7 @@ export default function Home() {
       <Experience />
       <Skills />
       <Achievements />
+      <Certificates />
       <Contact />
     </main>
   );

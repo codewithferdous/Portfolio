@@ -29,6 +29,7 @@ export const links = [
   { name: 'Education', id: 'experience' },
   { name: 'Skills', id: 'skills' },
   { name: 'Achievements', id: 'achivements' },
+  { name: 'Certificates', id: 'certificates' },
   { name: 'Contact', id: 'contact' },
 ] as const;
 

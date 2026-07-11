@@ -55,9 +55,13 @@ const EXPERIENCE = [
 
 const ACHIEVEMENTS = [
   'Certificate of Excellence in Database: Won the Inter-Subject Project Competition in Database at COMSATS University Islamabad, Abbottabad Campus, on 10th January 2025.',
+  'Certificate of Excellence in Computer Network: Runner-up in the Inter-Subject Project Competition in Computer Network on 10th January 2025.',
   'Campus Honor Roll Award in Fifth Semester: Recognized for securing SGPA of 3.88/4.0 in the Fifth Semester (Fall 2024).',
   'Campus Honor Roll Award in 3rd Semester: Recognized for securing SGPA of 4.0/4.0 in the 3rd Semester (Fall 2023).',
-  'Certificate of Excellence in Computer Network: Runner-up in the Inter-Subject Project Competition in Computer Network on 10th January 2025.',
+  'Campus Honor Roll Certificate 6th Semester: Achieved perfect SGPA of 4.0/4.0 in the 6th Semester (Spring 2025).',
+];
+
+const CERTIFICATIONS = [
   'Certificate of Accomplishment - Rosetta Stone Foundations: Completed Rosetta Stone Foundations for English (American), Levels 1–5.',
   'Certificate of Course Completion - Spoken English: Awarded by NS Training for successful completion of a Spoken English course on 30th July 2023.',
   'Certificate of Appreciation - PNP Internship Program: Recognized by Press Network of Pakistan for remarkable contribution during the PNP Internship Program (Winter 2023–24).',
@@ -71,7 +75,6 @@ const ACHIEVEMENTS = [
   'CCNA: Introduction to Networks: Earned Cisco Networking Academy certification demonstrating foundational knowledge in computer networking, completed through COMSATS University on 14th September 2025.',
   'University Convocation – Usher Certificate: Recognized for voluntary service as an Usher during the University Convocation ceremony.',
   'Workshop on Deep Learning and NLP: Certificate of Participation by the Robotics Club, COMSATS University.',
-  'Campus Honor Roll Certificate 6th Semester: Achieved perfect SGPA of 4.0/4.0 in the 6th Semester (Spring 2025).',
   'Demystifying Deep Learning Workshop: Completed a four-day intensive workshop on deep learning concepts and neural networks.',
   'Maximize Productivity With AI Tools: Awarded by Google through Coursera for completing the Maximize Productivity With AI Tools course.',
 ];
@@ -101,8 +104,11 @@ ${EDUCATION.map((e) => `- ${e}`).join('\n')}
 === WORK EXPERIENCE ===
 ${EXPERIENCE.map((e) => `- ${e}`).join('\n')}
 
-=== ACHIEVEMENTS & CERTIFICATIONS ===
+=== ACHIEVEMENTS & AWARDS ===
 ${ACHIEVEMENTS.map((a) => `- ${a}`).join('\n')}
+
+=== CERTIFICATIONS & CERTIFICATES ===
+${CERTIFICATIONS.map((c) => `- ${c}`).join('\n')}
 
 === CONTACT ===
 ${CONTACT}
