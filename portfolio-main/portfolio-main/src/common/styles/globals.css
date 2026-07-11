@@ -61,3 +61,27 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .prose-chat p {
+    @apply mb-2 last:mb-0;
+  }
+  .prose-chat strong {
+    @apply font-semibold text-cyan-700 dark:text-purple-300;
+  }
+  .prose-chat em {
+    @apply italic;
+  }
+  .prose-chat ul {
+    @apply list-disc list-inside mb-2 last:mb-0 space-y-1;
+  }
+  .prose-chat ol {
+    @apply list-decimal list-inside mb-2 last:mb-0 space-y-1;
+  }
+  .prose-chat li {
+    @apply ml-1;
+  }
+  .prose-chat a {
+    @apply text-cyan-600 underline decoration-cyan-600/30 underline-offset-2 hover:decoration-cyan-600 dark:text-purple-400 dark:decoration-purple-400/30 dark:hover:decoration-purple-400;
+  }
+}

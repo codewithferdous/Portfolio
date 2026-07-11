@@ -3,6 +3,8 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { Bot, MessageCircle, Send, Sparkles, X } from 'lucide-react';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -189,13 +191,21 @@ export default function ChatAssistant() {
 
                     {/* Bubble */}
                     <div
-                      className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
+                      className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
                         msg.role === 'user'
                           ? 'rounded-br-md bg-gradient-to-br from-cyan-500 to-purple-600 text-white'
                           : 'rounded-bl-md bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200'
                       }`}
                     >
-                      {msg.content}
+                      {msg.role === 'user' ? (
+                        msg.content
+                      ) : (
+                        <div className="prose-chat">
+                          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                            {msg.content}
+                          </ReactMarkdown>
+                        </div>
+                      )}
                     </div>
                   </motion.div>
                 ))}
@@ -220,33 +230,26 @@ export default function ChatAssistant() {
                   </motion.div>
                 )}
 
-                {/* Suggestions for recruiters */}
-                {messages.length === 1 && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 }}
-                    className="flex flex-wrap gap-2 mt-2"
-                  >
-                    {SUGGESTIONS.map((suggestion, i) => (
-                      <button
-                        key={i}
-                        onClick={() => sendMessage(suggestion)}
-                        disabled={isLoading}
-                        className="rounded-full border border-cyan-200 bg-cyan-50/50 px-3 py-1.5 text-xs text-cyan-700 transition-colors hover:bg-cyan-100 hover:text-cyan-800 disabled:opacity-50 dark:border-purple-800 dark:bg-purple-900/30 dark:text-purple-300 dark:hover:bg-purple-900/50 dark:hover:text-purple-200 text-left"
-                      >
-                        {suggestion}
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-
                 <div ref={messagesEndRef} />
               </div>
             </div>
 
-            {/* ── Input Area ── */}
+            {/* ── Suggestions & Input Area ── */}
             <div className="border-t border-gray-200/60 bg-gray-50/80 px-4 py-3 dark:border-gray-700/60 dark:bg-gray-900/80">
+              {/* Permanent Suggestions */}
+              <div className="mb-3 flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+                {SUGGESTIONS.map((suggestion, i) => (
+                  <button
+                    key={i}
+                    onClick={() => sendMessage(suggestion)}
+                    disabled={isLoading}
+                    className="whitespace-nowrap rounded-full border border-cyan-200 bg-cyan-50/50 px-3 py-1.5 text-xs text-cyan-700 transition-colors hover:bg-cyan-100 hover:text-cyan-800 disabled:opacity-50 dark:border-purple-800 dark:bg-purple-900/30 dark:text-purple-300 dark:hover:bg-purple-900/50 dark:hover:text-purple-200"
+                  >
+                    {suggestion}
+                  </button>
+                ))}
+              </div>
+
               <div className="flex items-end gap-2">
                 <textarea
                   ref={inputRef}
