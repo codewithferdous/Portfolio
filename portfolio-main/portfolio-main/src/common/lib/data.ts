@@ -29,6 +29,7 @@ export const links = [
   { name: "Home", id: "home" },
   { name: "About", id: "about" },
   { name: "Projects", id: "projects" },
+  { name: "Experience", id: "work-experience" },
   { name: "Education", id: "experience" },
   { name: "Skills", id: "skills" },
   { name: "Achievements", id: "achivements" },
@@ -60,6 +61,48 @@ export const studyData = [
   },
 ] as const;
 
+export type ExperienceItem = {
+  company: string;
+  role: string;
+  duration: string;
+  location: string;
+  description: string;
+  technologies: string[];
+  companyLogo?: string;
+  bannerImage?: string;
+  companyWebsite?: string;
+};
+
+export const experienceData: ExperienceItem[] = [
+  {
+    company: 'Ezitech Learning Institute',
+    role: 'MERN Stack Intern',
+    duration: 'Jun 2024 – Aug 2024',
+    location: 'Rawalpindi, Pakistan',
+    description:
+      'Completed a two-month internship focused on MERN Stack development. Built multiple projects including an Attendance Management System in React, Hepta Travelling Website, and Netflix Clone. Gained hands-on experience with full-stack JavaScript development and modern frontend frameworks.',
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JavaScript', 'CSS'],
+    companyWebsite: 'https://ezitech.org',
+  },
+  {
+    company: 'TechVentures Inc.',
+    role: 'Frontend Developer Intern',
+    duration: 'Aug 2024 – Sep 2024',
+    location: 'Islamabad, Pakistan',
+    description:
+      'Worked as a Frontend Developer intern, building responsive user interfaces and interactive web components. Demonstrated strong technical proficiency in HTML, CSS, JavaScript, and React.js with a proactive and professional attitude.',
+    technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS'],
+  },
+  {
+    company: 'Press Network of Pakistan (PNP)',
+    role: 'Intern – Media & Communications',
+    duration: 'Winter 2023 – 2024',
+    location: 'Pakistan',
+    description:
+      'Contributed to media and communications initiatives during the PNP Internship Program. Gained experience in content creation, digital outreach, and organizational communication workflows.',
+    technologies: ['Content Writing', 'Digital Media', 'Communication'],
+  },
+];
 
 export const images = {
   archerypic,

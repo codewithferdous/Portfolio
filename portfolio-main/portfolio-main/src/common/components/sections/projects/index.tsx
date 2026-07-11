@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { useSectionInView } from "@/common/lib/hooks";
 import { projectsData } from "@/common/lib/data";
 import Project from "./_components/project";
@@ -8,11 +8,14 @@ import SectionHeading from "@/common/components/shared/section-heading";
 import SectionDivider from "@/common/components/shared/section-divider";
 import { motion, AnimatePresence } from "framer-motion";
 
+const PROJECTS_PER_PAGE = 5;
+
 export default function Projects() {
   const { ref } = useSectionInView("projects", 0.25);
 
   const [category, setCategory] = useState<"All" | string>("All");
   const [searchTerm, setSearchTerm] = useState("");
+  const [visibleCount, setVisibleCount] = useState(PROJECTS_PER_PAGE);
 
   // Dynamic categories
   const categories = useMemo(() => {
@@ -27,6 +30,15 @@ export default function Projects() {
       return matchesCategory && matchesSearch;
     });
   }, [category, searchTerm]);
+
+  // Reset visible count when filters change
+  useEffect(() => {
+    setVisibleCount(PROJECTS_PER_PAGE);
+  }, [category, searchTerm]);
+
+  // Only render the visible slice
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredProjects.length;
 
   // Animation variants
   const containerVariants = {
@@ -88,8 +100,8 @@ export default function Projects() {
         animate="visible"
       >
         <AnimatePresence>
-          {filteredProjects.length > 0 ? (
-            filteredProjects.map((project, index) => (
+          {visibleProjects.length > 0 ? (
+            visibleProjects.map((project, index) => (
               <motion.div
                 key={project.title}
                 variants={projectVariants}
@@ -111,6 +123,20 @@ export default function Projects() {
           )}
         </AnimatePresence>
       </motion.div>
+
+      {/* Load More Button */}
+      {hasMore && (
+        <div className="flex justify-center mb-12">
+          <motion.button
+            onClick={() => setVisibleCount((prev) => prev + PROJECTS_PER_PAGE)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-3 rounded-full font-semibold bg-[#ffcbb4] dark:bg-[#ddbea9] text-black shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            Load More
+          </motion.button>
+        </div>
+      )}
 
       <SectionDivider />
     </section>
