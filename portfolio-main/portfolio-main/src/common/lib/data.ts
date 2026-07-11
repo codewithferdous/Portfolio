@@ -17,7 +17,7 @@ import codecrux from '@/../public/images/code ceux.png';
 import filedriveImg from '@/../public/images/file-drive.png';
 import projectmanagementImg from '@/../public/images/project-management.png';
 import reactfoodImg from '@/../public/images/react-food.png';
- import hepta from '@/../public/images/heptaPic.jpg';
+import hepta from '@/../public/images/heptaPic.jpg';
 import portfolioImg from '@/../public/images/portfolio.png';
 // import auditMasterImg from '@/../public/images/audit-master.png';
 // import accountingImg from '@/../public/images/accounting.jpg';
@@ -53,9 +53,9 @@ export const studyData = [
     date: '2019 – 2021',
   },
   {
-    title: 'BS Software Engineering (7th Semester)',
+    title: 'BS Software Engineering (8th Semester)',
     location: 'COMSATS University Islamabad, Abbottabad Campus',
-    description: 'CGPA: 3.83',
+    description: 'CGPA: 3.85',
     icon: React.createElement(BookOpenIcon),
     date: '2022 – Present',
   },
@@ -75,33 +75,24 @@ export type ExperienceItem = {
 
 export const experienceData: ExperienceItem[] = [
   {
-    company: 'Ezitech Learning Institute',
-    role: 'MERN Stack Intern',
-    duration: 'Jun 2024 – Aug 2024',
-    location: 'Rawalpindi, Pakistan',
-    description:
-      'Completed a two-month internship focused on MERN Stack development. Built multiple projects including an Attendance Management System in React, Hepta Travelling Website, and Netflix Clone. Gained hands-on experience with full-stack JavaScript development and modern frontend frameworks.',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JavaScript', 'CSS'],
-    companyWebsite: 'https://ezitech.org',
-  },
-  {
-    company: 'TechVentures Inc.',
-    role: 'Frontend Developer Intern',
-    duration: 'Aug 2024 – Sep 2024',
+    company: 'Elite Tech Solutions (Pvt) Limited',
+    role: 'MERN Stack Development Intern',
+    duration: 'Feb 2026 – Mar 2026',
     location: 'Islamabad, Pakistan',
+    companyLogo: '/images/elitelogo.png',
+    bannerImage: '/images/intershipteliteTEach.png',
     description:
-      'Worked as a Frontend Developer intern, building responsive user interfaces and interactive web components. Demonstrated strong technical proficiency in HTML, CSS, JavaScript, and React.js with a proactive and professional attitude.',
-    technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS'],
-  },
-  {
-    company: 'Press Network of Pakistan (PNP)',
-    role: 'Intern – Media & Communications',
-    duration: 'Winter 2023 – 2024',
-    location: 'Pakistan',
-    description:
-      'Contributed to media and communications initiatives during the PNP Internship Program. Gained experience in content creation, digital outreach, and organizational communication workflows.',
-    technologies: ['Content Writing', 'Digital Media', 'Communication'],
-  },
+      'Successfully completed a 4-week internship and 2-week training program in MERN Stack Development. Gained practical experience building scalable web applications using MongoDB, Express.js, React, and Node.js while working on real-world development tasks and strengthening full-stack development skills.',
+    technologies: [
+      'MongoDB',
+      'Express.js',
+      'React',
+      'Node.js',
+      'JavaScript',
+      'REST APIs'
+    ],
+    companyWebsite: 'https://elitetechhub.tech',
+  }
 ];
 
 export const images = {
@@ -123,36 +114,36 @@ export const images = {
 
 export const projectsData = [
   {
-  title: 'Hepta',
-  description: `A modern frontend travel website built with React. Features elegant layouts, responsive design, and sections for destinations, travel services, and blogs.`,
-  tags: ['React', 'HTML', 'CSS', 'JavaScript'],
-  category: 'Web Dev',
-  imageUrl: hepta, // replace with your imported image
-  link: 'https://github.com/codewithferdous/WEBFrontEnd_Projects/tree/main/Html%20Css%20javaScript%20projects/hepta/hepta', // add GitHub or demo link
-},
-{
-  title: 'MediConnect –  Healthcare Management System',
-  description: `MediConnect A modern healthcare management web dev  built with TypeScript and React. Features multi-role access, Supabase authentication, responsive dashboards, and a clean, interactive UI.`,
-  tags: ['TypeScript', 'React', 'Supabase', 'Multi-Role Access', 'Authentication'],
-  category: 'Web Dev',
-  imageUrl: mediconnect, // replace with your imported image
-  link: 'https://github.com/codewithferdous/HCI/tree/main/MediConnect%20Healthcare%20Platform%20Design/MediConnect%20Healthcare%20Platform%20Design', // replace with actual repo or demo link
-},
+    title: 'Hepta',
+    description: `A modern frontend travel website built with React. Features elegant layouts, responsive design, and sections for destinations, travel services, and blogs.`,
+    tags: ['React', 'HTML', 'CSS', 'JavaScript'],
+    category: 'Web Dev',
+    imageUrl: hepta, // replace with your imported image
+    link: 'https://github.com/codewithferdous/WEBFrontEnd_Projects/tree/main/Html%20Css%20javaScript%20projects/hepta/hepta', // add GitHub or demo link
+  },
+  {
+    title: 'MediConnect –  Healthcare Management System',
+    description: `MediConnect A modern healthcare management web dev  built with TypeScript and React. Features multi-role access, Supabase authentication, responsive dashboards, and a clean, interactive UI.`,
+    tags: ['TypeScript', 'React', 'Supabase', 'Multi-Role Access', 'Authentication'],
+    category: 'Web Dev',
+    imageUrl: mediconnect, // replace with your imported image
+    link: 'https://github.com/codewithferdous/HCI/tree/main/MediConnect%20Healthcare%20Platform%20Design/MediConnect%20Healthcare%20Platform%20Design', // replace with actual repo or demo link
+  },
 
-{
-  title: 'Portfolio',
-  description: `A personal portfolio website built with Next.js. Showcases projects, skills, and experience with a clean, modern design and responsive layout.`,
-  tags: ['Next.js', 'React', 'Tailwind CSS', 'JavaScript'],
-  category: 'Web Dev',
-  imageUrl: portfolioImg, // replace with your imported image
-  link: 'https://github.com/codewithferdous/Portfolio/tree/main/portfolio-main/portfolio-main', // update with your actual GitHub or demo link
-},
+  {
+    title: 'Portfolio',
+    description: `A personal portfolio website built with Next.js. Showcases projects, skills, and experience with a clean, modern design and responsive layout.`,
+    tags: ['Next.js', 'React', 'Tailwind CSS', 'JavaScript'],
+    category: 'Web Dev',
+    imageUrl: portfolioImg, // replace with your imported image
+    link: 'https://github.com/codewithferdous/Portfolio/tree/main/portfolio-main/portfolio-main', // update with your actual GitHub or demo link
+  },
 
   {
     title: 'Runner Game',
     description: `An endless runner game built with Unity and C#. Features dynamic obstacles, collision detection, and increasing game difficulty to test player reflexes. Includes sound effects and scoring system.`,
     tags: ['Unity', 'C#', 'Game Development', 'Physics', 'UI', 'Scoring System'],
-      category: 'Game Dev',
+    category: 'Game Dev',
     imageUrl: runnerpic,
     link: 'https://github.com/codewithferdous/Unity-projects', // Add demo or GitHub link
   },
@@ -160,7 +151,7 @@ export const projectsData = [
     title: 'Archery Quest Game',
     description: `A Unity-based archery quest game with two levels of increasing difficulty. Implements physics-based arrow shooting mechanics, scoring, and immersive gameplay. Designed using C# scripting inside Unity.`,
     tags: ['Unity', 'C#', 'Game Development', 'Physics', 'Arrow Mechanics', 'Scoring System'],
-      category: 'Game Dev',
+    category: 'Game Dev',
     imageUrl: archerypic,
     link: 'https://github.com/codewithferdous/Unity-projects', // Add demo or GitHub link
   },
@@ -169,7 +160,7 @@ export const projectsData = [
     description: `A web-based system designed for schools and institutions to track student attendance. Includes admin and student panels, authentication, and attendance reports.`,
     tags: ['HTML', 'CSS', 'JavaScript', 'Web Development'],
     category: 'Web Dev',
-    imageUrl:  attendence, // Replace with your image path
+    imageUrl: attendence, // Replace with your image path
     link: 'https://github.com/codewithferdous/WEBFrontEnd_Projects/tree/main/Html%20Css%20javaScript%20projects/Html%20Css%20javaScript%20projects/attendance-management-system', // Add demo or GitHub link
   },
   {
@@ -177,7 +168,7 @@ export const projectsData = [
     description: `A responsive front-end clone of Amazon’s homepage. Includes navbar, product showcase sections, and grid layouts. Built to practice responsive design.`,
     tags: ['HTML', 'CSS', 'Responsive Design', 'Frontend'],
     category: 'Web Dev',
-    imageUrl:  amazone,
+    imageUrl: amazone,
     link: 'https://github.com/codewithferdous/WEBFrontEnd_Projects/tree/main/Html%20Css%20javaScript%20projects/Html%20Css%20javaScript%20projects/Amazon%20clone',
   },
   {
@@ -185,7 +176,7 @@ export const projectsData = [
     description: `Frontend clone of Netflix’s homepage with responsive layouts. Includes hero banner, movie thumbnails, and hover effects to replicate Netflix’s user experience.`,
     tags: ['HTML', 'CSS', 'Frontend', 'Responsive Design', 'Hover Effects'],
     category: 'Web Dev',
-    imageUrl:netflix,
+    imageUrl: netflix,
     link: 'https://github.com/codewithferdous/WEBFrontEnd_Projects/tree/main/Html%20Css%20javaScript%20projects/Html%20Css%20javaScript%20projects/Netflix%20frontend',
   },
   {
@@ -193,7 +184,7 @@ export const projectsData = [
     description: `A React-based platform designed for practicing and managing programming questions. Includes user-friendly UI for browsing, solving, and organizing coding problems.`,
     tags: ['React', 'JavaScript', 'Frontend', 'UI/UX', 'Web Development'],
     category: 'Web Dev',
-    imageUrl:  codecrux,
+    imageUrl: codecrux,
     link: 'https://github.com/codewithferdous/WEBFrontEnd_Projects/tree/main/Html%20Css%20javaScript%20projects/codecrux/codecrux',
   },
   {
@@ -201,7 +192,7 @@ export const projectsData = [
     description: `Java implementation of Huffman Coding for text compression. Demonstrates encoding and decoding algorithms used in file compression utilities. Focuses on data structures and algorithm design.`,
     tags: ['Java', 'Algorithms', 'Data Structures', 'Text Compression'],
     category: 'Data Structure',
-    imageUrl:  huffman,
+    imageUrl: huffman,
     link: 'https://github.com/codewithferdous/DataStructure/tree/main/HuffmanCoding',
   },
   {
@@ -220,7 +211,7 @@ export const projectsData = [
     imageUrl: rock, // Replace with your image path
     link: 'https://github.com/codewithferdous/WEBFrontEnd_Projects/tree/main/Html%20Css%20javaScript%20projects/Html%20Css%20javaScript%20projects/RockSesiorFire', // Replace with actual front page/demo link
   },
-  
+
 
 
 ] as const;
@@ -239,7 +230,7 @@ export const skillsData = [
   ['MongoDB', '/svgs/mongodb-original.svg'],
   ['PostgreSQL', '/svgs/postgresql.svg'],
   ['MySQL', '/svgs/MySQL.svg'],
- 
+
   ['Axios', '/svgs/axios.svg'],
   ['HTML', '/svgs/file-type-html.svg'],
   ['CSS', '/svgs/file-type-css.svg'],
