@@ -1,46 +1,42 @@
+import { BookOpenIcon } from '@heroicons/react/24/outline';
 import React from 'react';
 
-import archerypic from '@/../public/images/archery.jpeg';
-import runnerpic from '@/../public/images/runner.jpeg';
-import attendence from '@/../public/images/Attendence.png';
-
-import huffman from '@/../public/images/huffman.jpg';
-
-import netflix from '@/../public/images/netflix.jpeg';
-
 import amazone from '@/../public/images/amazone.jpg';
-
-import rock from '@/../public/images/rock.png';
-import mediconnect from '@/../public/images/mediconnct.jpeg';
-import currency from '@/../public/images/currency.png';
+import archerypic from '@/../public/images/archery.jpeg';
+import attendence from '@/../public/images/Attendence.png';
 import codecrux from '@/../public/images/code ceux.png';
+import currency from '@/../public/images/currency.png';
 import filedriveImg from '@/../public/images/file-drive.png';
+import hepta from '@/../public/images/heptaPic.jpg';
+import huffman from '@/../public/images/huffman.jpg';
+import mediconnect from '@/../public/images/mediconnct.jpeg';
+import netflix from '@/../public/images/netflix.jpeg';
+import portfolioImg from '@/../public/images/portfolio.png';
 import projectmanagementImg from '@/../public/images/project-management.png';
 import reactfoodImg from '@/../public/images/react-food.png';
-import hepta from '@/../public/images/heptaPic.jpg';
-import portfolioImg from '@/../public/images/portfolio.png';
+import rock from '@/../public/images/rock.png';
+import runnerpic from '@/../public/images/runner.jpeg';
 // import auditMasterImg from '@/../public/images/audit-master.png';
 // import accountingImg from '@/../public/images/accounting.jpg';
 // import archeryPic from '@./..public/images/archeryPic.jpeg';
 // import { BookIcon, BriefcaseBusinessIcon } from 'lucide-react';
-import { BookOpenIcon } from '@heroicons/react/24/outline';
 
 export const links = [
-  { name: "Home", id: "home" },
-  { name: "About", id: "about" },
-  { name: "Projects", id: "projects" },
-  { name: "Experience", id: "work-experience" },
-  { name: "Education", id: "experience" },
-  { name: "Skills", id: "skills" },
-  { name: "Achievements", id: "achivements" },
-  { name: "Contact", id: "contact" },
+  { name: 'Home', id: 'home' },
+  { name: 'About', id: 'about' },
+  { name: 'Projects', id: 'projects' },
+  { name: 'Experience', id: 'work-experience' },
+  { name: 'Education', id: 'experience' },
+  { name: 'Skills', id: 'skills' },
+  { name: 'Achievements', id: 'achivements' },
+  { name: 'Contact', id: 'contact' },
 ] as const;
-
 
 export const studyData = [
   {
     title: 'Matric (Science)',
-    location: 'Squadron Leader Masood-ul-Haq (Shaheed) Girls Model Higher Secondary School, Bagh',
+    location:
+      'Squadron Leader Masood-ul-Haq (Shaheed) Girls Model Higher Secondary School, Bagh',
     description: 'Percentage: 89.5%',
     icon: React.createElement(BookOpenIcon),
     date: '2016 – 2018',
@@ -89,10 +85,10 @@ export const experienceData: ExperienceItem[] = [
       'React',
       'Node.js',
       'JavaScript',
-      'REST APIs'
+      'REST APIs',
     ],
     companyWebsite: 'https://elitetechhub.tech',
-  }
+  },
 ];
 
 export const images = {
@@ -109,7 +105,7 @@ export const images = {
   currency,
   rock,
   portfolioImg,
-  mediconnect
+  mediconnect,
 };
 
 export const projectsData = [
@@ -124,7 +120,13 @@ export const projectsData = [
   {
     title: 'MediConnect –  Healthcare Management System',
     description: `MediConnect A modern healthcare management web dev  built with TypeScript and React. Features multi-role access, Supabase authentication, responsive dashboards, and a clean, interactive UI.`,
-    tags: ['TypeScript', 'React', 'Supabase', 'Multi-Role Access', 'Authentication'],
+    tags: [
+      'TypeScript',
+      'React',
+      'Supabase',
+      'Multi-Role Access',
+      'Authentication',
+    ],
     category: 'Web Dev',
     imageUrl: mediconnect, // replace with your imported image
     link: 'https://github.com/codewithferdous/HCI/tree/main/MediConnect%20Healthcare%20Platform%20Design/MediConnect%20Healthcare%20Platform%20Design', // replace with actual repo or demo link
@@ -142,7 +144,14 @@ export const projectsData = [
   {
     title: 'Runner Game',
     description: `An endless runner game built with Unity and C#. Features dynamic obstacles, collision detection, and increasing game difficulty to test player reflexes. Includes sound effects and scoring system.`,
-    tags: ['Unity', 'C#', 'Game Development', 'Physics', 'UI', 'Scoring System'],
+    tags: [
+      'Unity',
+      'C#',
+      'Game Development',
+      'Physics',
+      'UI',
+      'Scoring System',
+    ],
     category: 'Game Dev',
     imageUrl: runnerpic,
     link: 'https://github.com/codewithferdous/Unity-projects', // Add demo or GitHub link
@@ -150,7 +159,14 @@ export const projectsData = [
   {
     title: 'Archery Quest Game',
     description: `A Unity-based archery quest game with two levels of increasing difficulty. Implements physics-based arrow shooting mechanics, scoring, and immersive gameplay. Designed using C# scripting inside Unity.`,
-    tags: ['Unity', 'C#', 'Game Development', 'Physics', 'Arrow Mechanics', 'Scoring System'],
+    tags: [
+      'Unity',
+      'C#',
+      'Game Development',
+      'Physics',
+      'Arrow Mechanics',
+      'Scoring System',
+    ],
     category: 'Game Dev',
     imageUrl: archerypic,
     link: 'https://github.com/codewithferdous/Unity-projects', // Add demo or GitHub link
@@ -211,12 +227,7 @@ export const projectsData = [
     imageUrl: rock, // Replace with your image path
     link: 'https://github.com/codewithferdous/WEBFrontEnd_Projects/tree/main/Html%20Css%20javaScript%20projects/Html%20Css%20javaScript%20projects/RockSesiorFire', // Replace with actual front page/demo link
   },
-
-
-
 ] as const;
-
-
 
 export const skillsData = [
   ['JavaScript', '/svgs/javascript-js.svg'],
@@ -240,4 +251,3 @@ export const skillsData = [
 
   ['', '/svgs/etc.svg'],
 ] as const;
-

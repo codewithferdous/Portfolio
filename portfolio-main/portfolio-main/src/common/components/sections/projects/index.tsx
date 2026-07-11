@@ -1,32 +1,36 @@
-"use client";
+'use client';
 
-import React, { useState, useMemo, useEffect } from "react";
-import { useSectionInView } from "@/common/lib/hooks";
-import { projectsData } from "@/common/lib/data";
-import Project from "./_components/project";
-import SectionHeading from "@/common/components/shared/section-heading";
-import SectionDivider from "@/common/components/shared/section-divider";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useMemo, useEffect } from 'react';
+
+import SectionDivider from '@/common/components/shared/section-divider';
+import SectionHeading from '@/common/components/shared/section-heading';
+import { projectsData } from '@/common/lib/data';
+import { useSectionInView } from '@/common/lib/hooks';
+
+import Project from './_components/project';
 
 const PROJECTS_PER_PAGE = 5;
 
 export default function Projects() {
-  const { ref } = useSectionInView("projects", 0.25);
+  const { ref } = useSectionInView('projects', 0.25);
 
-  const [category, setCategory] = useState<"All" | string>("All");
-  const [searchTerm, setSearchTerm] = useState("");
+  const [category, setCategory] = useState<'All' | string>('All');
+  const [searchTerm, setSearchTerm] = useState('');
   const [visibleCount, setVisibleCount] = useState(PROJECTS_PER_PAGE);
 
   // Dynamic categories
   const categories = useMemo(() => {
-    return ["All", ...Array.from(new Set(projectsData.map((p) => p.category)))];
+    return ['All', ...Array.from(new Set(projectsData.map((p) => p.category)))];
   }, []);
 
   // Filtered projects based on category and search
   const filteredProjects = useMemo(() => {
     return projectsData.filter((p) => {
-      const matchesCategory = category === "All" || p.category === category;
-      const matchesSearch = p.title.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = category === 'All' || p.category === category;
+      const matchesSearch = p.title
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSearch;
     });
   }, [category, searchTerm]);
@@ -48,7 +52,11 @@ export default function Projects() {
 
   const projectVariants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: 'easeOut' },
+    },
   };
 
   return (
@@ -69,13 +77,13 @@ export default function Projects() {
               whileHover={{ scale: 1.05 }}
               className={`px-4 py-2 rounded-full font-semibold transition ${
                 category === cat
-                  ? "bg-[#ffcbb4] dark:bg-[#ddbea9] text-black"
-                  : "bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white"
+                  ? 'bg-[#ffcbb4] dark:bg-[#ddbea9] text-black'
+                  : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white'
               }`}
               onClick={() => setCategory(cat)}
             >
               {cat} (
-              {cat === "All"
+              {cat === 'All'
                 ? projectsData.length
                 : projectsData.filter((p) => p.category === cat).length}
               )

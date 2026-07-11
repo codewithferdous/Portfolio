@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { useEffect } from "react";
+import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
+import { useEffect } from 'react';
 
 export interface IRedoTextAnimationProps {
   delay: number;
@@ -11,21 +11,19 @@ export default function RedoTextAnimation({ delay }: IRedoTextAnimationProps) {
   const textIndex = useMotionValue(0);
 
   const texts = [
-   "I’m an AI explorer, solving challenges every day!",
-"Data and algorithms are my playground to innovate!",
-"Simplicity with intelligence makes design truly elegant.",
-"Debugging models is like finding hidden data patterns!",
-"Scalable AI solutions are my superpower always.",
-"Machine learning is the poetry of problem-solving.",
-"Collaboration builds smarter systems faster and better!",
-"Refining models is like sharpening digital intelligence.",
-"Continuous learning keeps me ahead in ML and AI.",
-"Elegant AI solutions define impactful innovation everywhere!",
-
-
+    'I’m an AI explorer, solving challenges every day!',
+    'Data and algorithms are my playground to innovate!',
+    'Simplicity with intelligence makes design truly elegant.',
+    'Debugging models is like finding hidden data patterns!',
+    'Scalable AI solutions are my superpower always.',
+    'Machine learning is the poetry of problem-solving.',
+    'Collaboration builds smarter systems faster and better!',
+    'Refining models is like sharpening digital intelligence.',
+    'Continuous learning keeps me ahead in ML and AI.',
+    'Elegant AI solutions define impactful innovation everywhere!',
   ];
 
-  const baseText = useTransform(textIndex, (latest) => texts[latest] || "");
+  const baseText = useTransform(textIndex, (latest) => texts[latest] || '');
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
   const displayText = useTransform(rounded, (latest) =>
@@ -35,12 +33,12 @@ export default function RedoTextAnimation({ delay }: IRedoTextAnimationProps) {
 
   useEffect(() => {
     animate(count, 60, {
-      type: "tween",
+      type: 'tween',
       delay: delay,
       duration: 5,
-      ease: "easeIn",
+      ease: 'easeIn',
       repeat: Infinity,
-      repeatType: "reverse",
+      repeatType: 'reverse',
       repeatDelay: 1,
       onUpdate(latest) {
         if (updatedThisRound.get() === true && latest > 0) {

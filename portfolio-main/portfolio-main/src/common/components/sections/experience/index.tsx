@@ -1,11 +1,12 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
-import { useSectionInView } from '@/common/lib/hooks';
+import React from 'react';
+
+import SectionDivider from '@/common/components/shared/section-divider';
 import SectionHeading from '@/common/components/shared/section-heading';
 import { studyData } from '@/common/lib/data';
-import SectionDivider from '@/common/components/shared/section-divider';
+import { useSectionInView } from '@/common/lib/hooks';
 
 export default function Experience() {
   const { ref } = useSectionInView('experience');

@@ -1,7 +1,6 @@
-
 // src/components/ui/card.tsx
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
@@ -9,7 +8,7 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
 
-export function Card({ children, className = "", ...props }: CardProps) {
+export function Card({ children, className = '', ...props }: CardProps) {
   return (
     <div
       {...props}
@@ -22,7 +21,7 @@ export function Card({ children, className = "", ...props }: CardProps) {
 
 export function CardContent({
   children,
-  className = "",
+  className = '',
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (

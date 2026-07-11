@@ -1,9 +1,10 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import React from "react";
-import { useSectionInView } from "@/common/lib/hooks";
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import React from 'react';
+
+import { useSectionInView } from '@/common/lib/hooks';
 
 // src/components/ui/card.tsx
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -12,7 +13,7 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
 
-export function Card({ children, className = "", ...props }: CardProps) {
+export function Card({ children, className = '', ...props }: CardProps) {
   return (
     <div
       {...props}
@@ -28,7 +29,7 @@ export function Card({ children, className = "", ...props }: CardProps) {
 
 export function CardContent({
   children,
-  className = "",
+  className = '',
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
@@ -43,183 +44,190 @@ interface Achievement {
   title: string;
   description: string;
   image: string;
-  category: ("Studies" | "Projects" | "Activities" | "Internship" | "Skills")[];
+  category: ('Studies' | 'Projects' | 'Activities' | 'Internship' | 'Skills')[];
   link?: string;
 }
 
 const achievements: Achievement[] = [
   {
     id: 1,
-    title: "Certificate of Excellence in Database",
+    title: 'Certificate of Excellence in Database',
     description:
-      "Won the Inter-Subject Project Competition in the subject of Database at COMSATS University Islamabad, Abbottabad Campus, on 10th January 2025.",
-    image: "./images/Certificate of Excellence in Database.jpg",
-    category: ["Studies", "Projects"],
+      'Won the Inter-Subject Project Competition in the subject of Database at COMSATS University Islamabad, Abbottabad Campus, on 10th January 2025.',
+    image: './images/Certificate of Excellence in Database.jpg',
+    category: ['Studies', 'Projects'],
   },
   {
     id: 3,
-    title: "Campus Honor Roll Award in Fifth Semester",
+    title: 'Campus Honor Roll Award in Fifth Semester',
     description:
-      "Recognized in the Campus Honor Roll for securing a perfect SGPA of 3.88/4.0 in the Fifth Semester (Fall 2024).",
-    image: "./images/Campus Honor Roll Award in Fifth Semester.jpg",
-    category: ["Studies"],
+      'Recognized in the Campus Honor Roll for securing a perfect SGPA of 3.88/4.0 in the Fifth Semester (Fall 2024).',
+    image: './images/Campus Honor Roll Award in Fifth Semester.jpg',
+    category: ['Studies'],
   },
-  
+
   {
     id: 2,
-    title: "Campus Honor Roll Award in 3rd Semester",
+    title: 'Campus Honor Roll Award in 3rd Semester',
     description:
-      "Recognized in the Campus Honor Roll for securing a perfect SGPA of 4.0/4.0 in the 3rd Semester (Fall 2023).",
-    image: "./images/Campus Honor Roll Award in 3rd Semester.png",
-    category: ["Studies"],
+      'Recognized in the Campus Honor Roll for securing a perfect SGPA of 4.0/4.0 in the 3rd Semester (Fall 2023).',
+    image: './images/Campus Honor Roll Award in 3rd Semester.png',
+    category: ['Studies'],
   },
   {
     id: 5,
-    title: "Certificate of Excellence in Computer Network",
+    title: 'Certificate of Excellence in Computer Network',
     description:
-      "Runner-up in the Inter-Subject Project Competition in Computer Network on 10th January 2025.",
-    image: "./images/Certificate of Excellence in Computer Network.png",
-    category: ["Studies", "Projects"],
+      'Runner-up in the Inter-Subject Project Competition in Computer Network on 10th January 2025.',
+    image: './images/Certificate of Excellence in Computer Network.png',
+    category: ['Studies', 'Projects'],
   },
   {
-  id: 6,
-  title: "Certificate of Accomplishment - Rosetta Stone Foundations",
-  description:
-    "Successfully completed Rosetta Stone Foundations for English (American), covering Levels 1, 2, 3, 4, and 5.",
-  image: "./images/Rosetta Stone Foundations.jpg",
-  category: ["Studies", "Skills"],
-},
-{
-  id: 7,
-  title: "Certificate of Course Completion - Spoken English",
-  description:
-    "Awarded by NS Training for the successful completion of a Spoken English course on 30th July 2023.",
-  image: "./images/Spoken English.jpg",
-  category: ["Studies", "Skills"],
-},
-{
-  id: 8,
-  title: "Certificate of Appreciation - PNP Internship Program",
-  description:
-    "Recognized by the Press Network of Pakistan for remarkable contribution during the PNP Internship Program (Winter 2023–24).",
-  image: "./images/PNP Internship Program.jpg",
-  category: ["Internship"],
-},
-{
-  id: 9,
-  title: "Certificate of Appreciation - Internship in MERN Stack",
-  description:
-    "Completed a two-month internship in MERN Stack at Ezitech Learning Institute (01-June-2024 to 01-Aug-2024) with full attendance. Worked on projects including Attendance Management System in React, Hepta Travelling Website, and Netflix Clone. Recognized for being attentive, punctual, and delivering high-quality work.",
-  image: "./images/Internship in MERN Stack.jpg",
-  category: ["Internship", "Skills"],
-},{
-  id: 10,
-  title: "Certificate of Participation - Global Workshop on Teamwork and Leadership",
-  description:
-    "This is to certify that Ferdous Gulzar has successfully participated in the online Global Workshop on Teamwork and Leadership, organized by Nobel Learning PBC on May 24, 2025. Facilitators: Andrew Sachs and Mykola Chernohorov. Organized by Nobel Learning PBC. More info: nobelnavigators.com/internship/",
-  image: "./images/mm.jpg",
-  category: ["Activities", "Skills",'Internship'],
-},
-{
-  id: 11,
-  title: "Certificate of Participation - COMSATS Students Week Fall 2024",
-  description:
-    "Awarded to Ferdous Gulzar for his role as Marketing Coordinator during COMSATS Students Week (7-11 October 2024) at COMSATS University Islamabad, Abbottabad Campus. Certificate acknowledged by Mr. Muhammad Zarak Khan (Convener) and Prof. Imtiaz Ali Khan (Director).",
-  image: "./images/COMSATS Students Week Fall 2024.jpg",
-  category: [ "Activities"],
-}
-,
-{
-  id: 12,
-  title: "Certificate of Appreciation - Aadrish Society Contribution",
-  description:
-    "This certificate is proudly presented to Ferdous Gulzar for their contribution and efforts towards the Aadrish Society at COMSATS University Islamabad, Abbottabad Campus. Awarded on 21st April 2025. Recognized by Prof. Dr. Shahid Khattak (Director) and Miss Laila Bibi (Faculty Artist).",
-  image: "./images/Aadrish Society Contribution.jpg",
-  category: ["Activities"],
-}
-,{
-  id: 13,
-  title: "Certificate of Completion - Beginner Web Development Bootcamp",
-  description:
-    "This is to certify that Ferdous Gulzar has successfully completed 'The Complete Beginner Web Development Bootcamp' organized by Google Developers Group OnCampus (GDGOC), COMSATS University Abbottabad Campus during Fall 2024. The participant demonstrated dedication and commitment throughout the program. Acknowledged by Muhammad Adil Khan (Faculty Advisor), Varisha Sajjad (Lead GDGOC), and Syed Shah Hussain Badshah (Tech Lead).",
-  image: "./images/Beginner Web Development Bootcamp.jpg",
-  category: [ "Skills","Studies"],
-}
-,{
-  "id": 14,
-  "title": " Certificate of Completion - Introduction to AI",
-  "description": "Awarded by Google and delivered through Coursera in recognition of successful completion of the course 'Introduction to AI'. The course provided foundational knowledge of artificial intelligence concepts, applications, and real-world use cases, building a strong base for further study and practical implementation of AI technologies.",
-  "image": "./images/INTRO to ai.jpeg",
-  "category": ["Skills"]
-}
-,
-{
-  id: 15,
-  title: "Certificate of Internship - Front-End Developer",
-  description:
-    "This is to certify that Ferdous Gulzar completed an internship as a Front-End Developer from August 1, 2024 to September 1, 2024. Demonstrated exceptional dedication, technical proficiency in HTML, CSS, JavaScript, and React.js, and strong collaboration skills. Recognized for professionalism and proactive attitude. Issued by Adil Qureshi, Manager HR.",
-  image: "./images/Front-End Developer.jpg",
-  category: ["Internship", "Skills"],
-},{
-  "id": 16,
-  "title": "CCNA: Introduction to Networks",
-  "description": "Earned the Cisco Networking Academy CCNA: Introduction to Networks certification, demonstrating foundational knowledge in computer networking, IP addressing, subnetting, routing, switching, and network security concepts. Completed through COMSATS University Islamabad, Abbottabad Campus on 14th September 2025.",
-  "image": "./images/cnn.jpg",
-  "category": ["Studies", "Skills"]
-},
-{
-  "id": 17,
-  "title": "University Convocation – Usher Certificate",
-  "description": "Recognized for voluntary service as an Usher during the University Convocation ceremony at COMSATS University Islamabad, Abbottabad Campus. Demonstrated organizational, communication, and teamwork skills while assisting in event coordination and guest management.",
-  "image": "./images/ushers_img.jpg",
-  "category": ["Activities"]
-}
-
-,
-{
-  id: 18,
-  title: "Workshop on Deep Learning and NLP",
-  description:
-    "Awarded a Certificate of Participation by the Robotics Club, COMSATS University Islamabad, for successfully participating in a workshop on Deep Learning and Natural Language Processing.",
-  image: "./images/nlp .jpg",
-  category:  ["Studies", "Skills"]
-},{
-  "id": 19,
-  "title": "Campus Honor Roll Certificate 6th Semester",
-  "description": "Awarded by COMSATS University Islamabad (CUI), Abbottabad Campus in recognition of outstanding academic performance. Achieved a perfect SGPA of 4.0/4.0 in the 6th Semester (Spring 2025) of the Bachelor of Science in Software Engineering program, reflecting dedication, consistency, and academic excellence.",
-  "image": "./images/campus.jpeg",
-  "category": ["Skills", "Studies"]
-},
-{
-  "id": 21,
-  "title": "Demystifying Deep Learning Workshop",
-  "description": "Successfully completed a four-day intensive workshop titled \"Demystifying Deep Learning – An Autumn Workshop,\" . Gained a solid understanding of core deep learning concepts, neural networks, and real-world AI applications, enhancing analytical thinking and exposure to modern machine learning technologies.",
-  "image": "./images/deep learning.jpeg",
-  "category": ["Skills"]
-}
-,
-{
-  id: 20,
-  title: "Maximize Productivity With AI Tools",
-  description:
-    "Awarded by Google and delivered through Coursera in recognition of successful completion of the course 'Maximize Productivity With AI Tools'. The course focused on using AI-powered tools to enhance productivity, optimize workflows, and improve efficiency in academic and professional tasks.",
-  image: "./images/INTRO to ai.jpeg",
-  category: [ "Skills"],
-}
-
-
+    id: 6,
+    title: 'Certificate of Accomplishment - Rosetta Stone Foundations',
+    description:
+      'Successfully completed Rosetta Stone Foundations for English (American), covering Levels 1, 2, 3, 4, and 5.',
+    image: './images/Rosetta Stone Foundations.jpg',
+    category: ['Studies', 'Skills'],
+  },
+  {
+    id: 7,
+    title: 'Certificate of Course Completion - Spoken English',
+    description:
+      'Awarded by NS Training for the successful completion of a Spoken English course on 30th July 2023.',
+    image: './images/Spoken English.jpg',
+    category: ['Studies', 'Skills'],
+  },
+  {
+    id: 8,
+    title: 'Certificate of Appreciation - PNP Internship Program',
+    description:
+      'Recognized by the Press Network of Pakistan for remarkable contribution during the PNP Internship Program (Winter 2023–24).',
+    image: './images/PNP Internship Program.jpg',
+    category: ['Internship'],
+  },
+  {
+    id: 9,
+    title: 'Certificate of Appreciation - Internship in MERN Stack',
+    description:
+      'Completed a two-month internship in MERN Stack at Ezitech Learning Institute (01-June-2024 to 01-Aug-2024) with full attendance. Worked on projects including Attendance Management System in React, Hepta Travelling Website, and Netflix Clone. Recognized for being attentive, punctual, and delivering high-quality work.',
+    image: './images/Internship in MERN Stack.jpg',
+    category: ['Internship', 'Skills'],
+  },
+  {
+    id: 10,
+    title:
+      'Certificate of Participation - Global Workshop on Teamwork and Leadership',
+    description:
+      'This is to certify that Ferdous Gulzar has successfully participated in the online Global Workshop on Teamwork and Leadership, organized by Nobel Learning PBC on May 24, 2025. Facilitators: Andrew Sachs and Mykola Chernohorov. Organized by Nobel Learning PBC. More info: nobelnavigators.com/internship/',
+    image: './images/mm.jpg',
+    category: ['Activities', 'Skills', 'Internship'],
+  },
+  {
+    id: 11,
+    title: 'Certificate of Participation - COMSATS Students Week Fall 2024',
+    description:
+      'Awarded to Ferdous Gulzar for his role as Marketing Coordinator during COMSATS Students Week (7-11 October 2024) at COMSATS University Islamabad, Abbottabad Campus. Certificate acknowledged by Mr. Muhammad Zarak Khan (Convener) and Prof. Imtiaz Ali Khan (Director).',
+    image: './images/COMSATS Students Week Fall 2024.jpg',
+    category: ['Activities'],
+  },
+  {
+    id: 12,
+    title: 'Certificate of Appreciation - Aadrish Society Contribution',
+    description:
+      'This certificate is proudly presented to Ferdous Gulzar for their contribution and efforts towards the Aadrish Society at COMSATS University Islamabad, Abbottabad Campus. Awarded on 21st April 2025. Recognized by Prof. Dr. Shahid Khattak (Director) and Miss Laila Bibi (Faculty Artist).',
+    image: './images/Aadrish Society Contribution.jpg',
+    category: ['Activities'],
+  },
+  {
+    id: 13,
+    title: 'Certificate of Completion - Beginner Web Development Bootcamp',
+    description:
+      "This is to certify that Ferdous Gulzar has successfully completed 'The Complete Beginner Web Development Bootcamp' organized by Google Developers Group OnCampus (GDGOC), COMSATS University Abbottabad Campus during Fall 2024. The participant demonstrated dedication and commitment throughout the program. Acknowledged by Muhammad Adil Khan (Faculty Advisor), Varisha Sajjad (Lead GDGOC), and Syed Shah Hussain Badshah (Tech Lead).",
+    image: './images/Beginner Web Development Bootcamp.jpg',
+    category: ['Skills', 'Studies'],
+  },
+  {
+    id: 14,
+    title: ' Certificate of Completion - Introduction to AI',
+    description:
+      "Awarded by Google and delivered through Coursera in recognition of successful completion of the course 'Introduction to AI'. The course provided foundational knowledge of artificial intelligence concepts, applications, and real-world use cases, building a strong base for further study and practical implementation of AI technologies.",
+    image: './images/INTRO to ai.jpeg',
+    category: ['Skills'],
+  },
+  {
+    id: 15,
+    title: 'Certificate of Internship - Front-End Developer',
+    description:
+      'This is to certify that Ferdous Gulzar completed an internship as a Front-End Developer from August 1, 2024 to September 1, 2024. Demonstrated exceptional dedication, technical proficiency in HTML, CSS, JavaScript, and React.js, and strong collaboration skills. Recognized for professionalism and proactive attitude. Issued by Adil Qureshi, Manager HR.',
+    image: './images/Front-End Developer.jpg',
+    category: ['Internship', 'Skills'],
+  },
+  {
+    id: 16,
+    title: 'CCNA: Introduction to Networks',
+    description:
+      'Earned the Cisco Networking Academy CCNA: Introduction to Networks certification, demonstrating foundational knowledge in computer networking, IP addressing, subnetting, routing, switching, and network security concepts. Completed through COMSATS University Islamabad, Abbottabad Campus on 14th September 2025.',
+    image: './images/cnn.jpg',
+    category: ['Studies', 'Skills'],
+  },
+  {
+    id: 17,
+    title: 'University Convocation – Usher Certificate',
+    description:
+      'Recognized for voluntary service as an Usher during the University Convocation ceremony at COMSATS University Islamabad, Abbottabad Campus. Demonstrated organizational, communication, and teamwork skills while assisting in event coordination and guest management.',
+    image: './images/ushers_img.jpg',
+    category: ['Activities'],
+  },
+  {
+    id: 18,
+    title: 'Workshop on Deep Learning and NLP',
+    description:
+      'Awarded a Certificate of Participation by the Robotics Club, COMSATS University Islamabad, for successfully participating in a workshop on Deep Learning and Natural Language Processing.',
+    image: './images/nlp .jpg',
+    category: ['Studies', 'Skills'],
+  },
+  {
+    id: 19,
+    title: 'Campus Honor Roll Certificate 6th Semester',
+    description:
+      'Awarded by COMSATS University Islamabad (CUI), Abbottabad Campus in recognition of outstanding academic performance. Achieved a perfect SGPA of 4.0/4.0 in the 6th Semester (Spring 2025) of the Bachelor of Science in Software Engineering program, reflecting dedication, consistency, and academic excellence.',
+    image: './images/campus.jpeg',
+    category: ['Skills', 'Studies'],
+  },
+  {
+    id: 21,
+    title: 'Demystifying Deep Learning Workshop',
+    description:
+      'Successfully completed a four-day intensive workshop titled "Demystifying Deep Learning – An Autumn Workshop," . Gained a solid understanding of core deep learning concepts, neural networks, and real-world AI applications, enhancing analytical thinking and exposure to modern machine learning technologies.',
+    image: './images/deep learning.jpeg',
+    category: ['Skills'],
+  },
+  {
+    id: 20,
+    title: 'Maximize Productivity With AI Tools',
+    description:
+      "Awarded by Google and delivered through Coursera in recognition of successful completion of the course 'Maximize Productivity With AI Tools'. The course focused on using AI-powered tools to enhance productivity, optimize workflows, and improve efficiency in academic and professional tasks.",
+    image: './images/INTRO to ai.jpeg',
+    category: ['Skills'],
+  },
 ];
 
-type Category = "All" | "Studies" | "Projects" | "Activities" | "Internship" | "Skills";
-const categories: (Category | "All")[] = [
-  "All",
-  "Studies",
-  "Projects",
-  "Activities",
-  "Internship",
-  "Skills",
+type Category =
+  | 'All'
+  | 'Studies'
+  | 'Projects'
+  | 'Activities'
+  | 'Internship'
+  | 'Skills';
+const categories: (Category | 'All')[] = [
+  'All',
+  'Studies',
+  'Projects',
+  'Activities',
+  'Internship',
+  'Skills',
 ];
-
 
 // 🔹 Reusable Card Component
 function AchievementCard({
@@ -233,16 +241,15 @@ function AchievementCard({
     <motion.div
       initial={{ opacity: 0, y: 90, scale: 0.92 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
       viewport={{ once: false, amount: 0.3 }}
       whileHover={{ scale: 1.05, rotate: 1 }}
       className="group"
     >
-     <Card
-  onClick={() => onImageClick(ach.image)}
-  className="cursor-pointer hover:shadow-cyan-500/40 dark:hover:shadow-purple-500/40"
->
-
+      <Card
+        onClick={() => onImageClick(ach.image)}
+        className="cursor-pointer hover:shadow-cyan-500/40 dark:hover:shadow-purple-500/40"
+      >
         <div className="relative w-full h-56 overflow-hidden">
           <motion.img
             src={ach.image}
@@ -260,7 +267,7 @@ function AchievementCard({
             {ach.description}
           </p>
           <p className="mt-2 text-xs text-gray-500 dark:text-gray-400 italic">
-            {ach.category.join(", ")}
+            {ach.category.join(', ')}
           </p>
 
           {ach.link && (
@@ -281,19 +288,19 @@ function AchievementCard({
 }
 
 export default function AchievementsSection() {
-  const [filter, setFilter] = useState<Category>("All");
+  const [filter, setFilter] = useState<Category>('All');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [visibleCount, setVisibleCount] = useState(6);
 
-  const { ref } = useSectionInView("achivements");
+  const { ref } = useSectionInView('achivements');
 
   const getCount = (cat: Category) =>
-    cat === "All"
+    cat === 'All'
       ? achievements.length
       : achievements.filter((a) => a.category.includes(cat)).length;
 
   const filteredAchievements =
-    filter === "All"
+    filter === 'All'
       ? achievements
       : achievements.filter((a) => a.category.includes(filter));
 
@@ -305,10 +312,9 @@ export default function AchievementsSection() {
       ref={ref}
       data-section="achivements"
       aria-label="Achievements Section"
-     className="py-20 relative overflow-hidden scroll-mt-20 
+      className="py-20 relative overflow-hidden scroll-mt-20 
   bg-white text-gray-900 
   dark:bg-black dark:text-white"
-
     >
       {/* Neon floating glow */}
       <motion.div
@@ -317,17 +323,15 @@ export default function AchievementsSection() {
         transition={{ duration: 7, repeat: Infinity }}
       />
 
-      
-
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-         className="text-4xl md:text-5xl font-bold text-center mb-14 
-  text-black dark:text-white">
-
+          className="text-4xl md:text-5xl font-bold text-center mb-14 
+  text-black dark:text-white"
+        >
           My Achievements
         </motion.h2>
 
@@ -340,13 +344,12 @@ export default function AchievementsSection() {
                 setFilter(cat);
                 setVisibleCount(6);
               }}
-         className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-2
+              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-2
   ${
     filter === cat
-      ? "bg-black text-white dark:bg-white dark:text-black shadow-md"
-      : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+      ? 'bg-black text-white dark:bg-white dark:text-black shadow-md'
+      : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
   }`}
-
               whileTap={{ scale: 0.9 }}
               whileHover={{ scale: 1.05 }}
             >
@@ -389,42 +392,41 @@ export default function AchievementsSection() {
         )}
       </div>
 
-     {/* Image Viewer */}
-{selectedImage && (
-  <motion.div
-    className="fixed inset-0 backdrop-blur-md flex items-center justify-center z-50 bg-black/80 dark:bg-black/90"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-  >
-    <motion.div
-      className="relative w-[80%] h-[80%] mt-16 rounded-2xl shadow-2xl flex items-center justify-center p-6
+      {/* Image Viewer */}
+      {selectedImage && (
+        <motion.div
+          className="fixed inset-0 backdrop-blur-md flex items-center justify-center z-50 bg-black/80 dark:bg-black/90"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
+            className="relative w-[80%] h-[80%] mt-16 rounded-2xl shadow-2xl flex items-center justify-center p-6
         bg-white border border-gray-300
         dark:bg-gradient-to-br dark:from-gray-950 dark:via-gray-900 dark:to-black dark:border-gray-700"
-      initial={{ scale: 0.85, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ type: 'spring', stiffness: 120, damping: 15 }}
-    >
-      <motion.button
-        className="absolute top-4 right-4 text-white bg-red-600 px-4 py-2 rounded-xl shadow-lg hover:bg-red-700"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={() => setSelectedImage(null)}
-      >
-        ✕ Close
-      </motion.button>
-      <motion.img
-        src={selectedImage}
-        alt="Certificate"
-        className="max-w-full max-h-full object-contain rounded-xl shadow-cyan-500/30"
-        initial={{ scale: 0.95, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-      />
-    </motion.div>
-  </motion.div>
-)}
-
+            initial={{ scale: 0.85, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: 'spring', stiffness: 120, damping: 15 }}
+          >
+            <motion.button
+              className="absolute top-4 right-4 text-white bg-red-600 px-4 py-2 rounded-xl shadow-lg hover:bg-red-700"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setSelectedImage(null)}
+            >
+              ✕ Close
+            </motion.button>
+            <motion.img
+              src={selectedImage}
+              alt="Certificate"
+              className="max-w-full max-h-full object-contain rounded-xl shadow-cyan-500/30"
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            />
+          </motion.div>
+        </motion.div>
+      )}
     </section>
   );
 }

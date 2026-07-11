@@ -1,16 +1,17 @@
-"use client";
+'use client';
 
-import { links } from "@/common/lib/data";
-import { smoothScrollTo } from "@/common/lib/utils";
-import { useActiveSectionContext } from "@/common/stores/active-section";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+import { links } from '@/common/lib/data';
+import { smoothScrollTo } from '@/common/lib/utils';
+import { useActiveSectionContext } from '@/common/stores/active-section';
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
-  const isHome = activeSection === "home"; // check if we’re on Home
+  const isHome = activeSection === 'home'; // check if we’re on Home
 
   return (
     <header className="relative z-[99]">
@@ -20,19 +21,19 @@ export default function Header() {
           className={`absolute inset-0 -z-10 rounded-full border shadow-md backdrop-blur-md
             ${
               isHome
-                ? "border-[#f4f3ee]/40 bg-white/70"
-                : "border-[#f4f3ee]/40 bg-white/70 dark:bg-black/50"
+                ? 'border-[#f4f3ee]/40 bg-white/70'
+                : 'border-[#f4f3ee]/40 bg-white/70 dark:bg-black/50'
             }`}
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
         />
 
         <ul className="flex items-center justify-center gap-5 px-6 py-2 text-[0.9rem] font-medium uppercase tracking-wide">
           {links.map((link) => (
             <motion.li
               className={`relative flex items-center justify-center ${
-                isHome ? "text-black" : "text-black dark:text-white"
+                isHome ? 'text-black' : 'text-black dark:text-white'
               }`}
               key={link.id}
               initial={{ y: -100, opacity: 0 }}
@@ -54,7 +55,7 @@ export default function Header() {
                     className="absolute inset-0 -z-10 rounded-full bg-[#ffcbb4] dark:bg-[#ddbea9]"
                     layoutId="activeSection"
                     transition={{
-                      type: "spring",
+                      type: 'spring',
                       stiffness: 300,
                       damping: 30,
                     }}

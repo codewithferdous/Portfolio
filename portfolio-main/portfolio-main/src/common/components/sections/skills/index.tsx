@@ -1,12 +1,13 @@
-"use client";
+'use client';
 
-import React from "react";
-import { skillsData } from "@/common/lib/data";
-import { useSectionInView } from "@/common/lib/hooks";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import SectionHeading from "@/common/components/shared/section-heading";
-import SectionDivider from "@/common/components/shared/section-divider";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import React from 'react';
+
+import SectionDivider from '@/common/components/shared/section-divider';
+import SectionHeading from '@/common/components/shared/section-heading';
+import { skillsData } from '@/common/lib/data';
+import { useSectionInView } from '@/common/lib/hooks';
 
 const fadeInAnimationVariants = {
   initial: {
@@ -23,7 +24,7 @@ const fadeInAnimationVariants = {
 };
 
 export default function Skills() {
-  const { ref } = useSectionInView("skills");
+  const { ref } = useSectionInView('skills');
 
   return (
     <section

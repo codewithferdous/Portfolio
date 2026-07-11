@@ -1,14 +1,21 @@
 'use client';
 
-import { useRef } from 'react';
-import { projectsData } from '@/common/lib/data';
-import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
+import { useRef } from 'react';
+
+import { projectsData } from '@/common/lib/data';
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({ title, description, tags, imageUrl, link }: ProjectProps) {
+export default function Project({
+  title,
+  description,
+  tags,
+  imageUrl,
+  link,
+}: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -26,14 +33,23 @@ export default function Project({ title, description, tags, imageUrl, link }: Pr
 
   // Hover variants for image
   const imageHoverVariants = {
-    hover: { scale: 1.08, rotate: 2, y: -5, transition: { type: 'spring', stiffness: 200 } },
+    hover: {
+      scale: 1.08,
+      rotate: 2,
+      y: -5,
+      transition: { type: 'spring', stiffness: 200 },
+    },
     rest: { scale: 1, rotate: 0, y: 0, transition: { duration: 0.3 } },
   };
 
   // Text fade-in
   const textVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: 'easeOut' },
+    },
   };
 
   // Tag hover

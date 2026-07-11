@@ -1,17 +1,19 @@
-"use client";
+'use client';
 
-import "next-cloudinary/dist/cld-video-player.css";
-import SectionDivider from "@/common/components/shared/section-divider";
-import TextAnimation from "./_components/text-animation";
-import { useSectionInView } from "@/common/lib/hooks";
-import { useActiveSectionContext } from "@/common/stores/active-section";
-import { smoothScrollTo } from "@/common/lib/utils";
-import { motion } from "framer-motion";
-import { Linkedin } from "lucide-react";
-import Image from "next/image";
+import 'next-cloudinary/dist/cld-video-player.css';
+import { motion } from 'framer-motion';
+import { Linkedin } from 'lucide-react';
+import Image from 'next/image';
+
+import SectionDivider from '@/common/components/shared/section-divider';
+import { useSectionInView } from '@/common/lib/hooks';
+import { smoothScrollTo } from '@/common/lib/utils';
+import { useActiveSectionContext } from '@/common/stores/active-section';
+
+import TextAnimation from './_components/text-animation';
 
 export default function Hero() {
-  const { ref } = useSectionInView("home");
+  const { ref } = useSectionInView('home');
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
@@ -41,8 +43,8 @@ export default function Hero() {
           <div className="container relative flex h-full w-full flex-col items-center">
             <div className="h-72 w-[280px] text-center text-[2rem] font-extrabold sm:w-[520px] md:w-[700px] lg:mb-5 lg:w-[920px] lg:text-[3rem]">
               <motion.span
-                initial={{ y: -100, x: "-50%", opacity: 0 }}
-                animate={{ y: 0, x: "-50%", opacity: 1 }}
+                initial={{ y: -100, x: '-50%', opacity: 0 }}
+                animate={{ y: 0, x: '-50%', opacity: 1 }}
                 className="mb-10 text-start font-extrabold"
               >
                 Hey!
@@ -63,8 +65,8 @@ export default function Hero() {
               <a
                 className="group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-darkBg px-7 py-3 text-white outline-none transition hover:bg-lightBeige hover:text-black sm:w-auto"
                 onClick={(e) => {
-                  smoothScrollTo({ e, id: "contact" });
-                  setActiveSection("contact");
+                  smoothScrollTo({ e, id: 'contact' });
+                  setActiveSection('contact');
                   setTimeOfLastClick(Date.now());
                 }}
               >
@@ -97,7 +99,7 @@ export default function Hero() {
                   <Image
                     width={25}
                     height={25}
-                    src={"/svgs/github.svg"}
+                    src={'/svgs/github.svg'}
                     alt="github icon"
                   />
                 </a>

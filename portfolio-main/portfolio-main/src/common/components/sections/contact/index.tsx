@@ -1,23 +1,30 @@
-"use client";
+'use client';
 
-import React from "react";
-import { motion } from "framer-motion";
-import { useSectionInView } from "@/common/lib/hooks";
-import SubmitBtn from "./_components/submit-btn";
-import SectionHeading from "@/common/components/shared/section-heading";
-import toast from "react-hot-toast";
-import { sendEmail } from "@/common/utils/actions/send-email";
-import { FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaGithub } from "react-icons/fa";
+import { motion } from 'framer-motion';
+import React from 'react';
+import toast from 'react-hot-toast';
+import {
+  FaEnvelope,
+  FaWhatsapp,
+  FaMapMarkerAlt,
+  FaGithub,
+} from 'react-icons/fa';
+
+import SectionHeading from '@/common/components/shared/section-heading';
+import { useSectionInView } from '@/common/lib/hooks';
+import { sendEmail } from '@/common/utils/actions/send-email';
+
+import SubmitBtn from './_components/submit-btn';
 
 export default function Contact() {
-  const { ref } = useSectionInView("contact");
+  const { ref } = useSectionInView('contact');
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+      transition: { delay: i * 0.2, duration: 0.6, ease: 'easeOut' },
     }),
   };
 
@@ -38,7 +45,8 @@ export default function Contact() {
 
       <div className="w-[min(100%,48rem)] px-6">
         <p className="mb-12 mt-6 text-gray-700 dark:text-gray-300 text-lg">
-          Feel free to reach out through email, WhatsApp, GitHub, or by filling out the form below.
+          Feel free to reach out through email, WhatsApp, GitHub, or by filling
+          out the form below.
         </p>
 
         {/* Contact Info Cards */}
@@ -46,27 +54,29 @@ export default function Contact() {
           {[
             {
               icon: <FaEnvelope className="text-3xl text-blue-500 mb-3" />,
-              title: "Email",
-              text: "ferdousgulzar543@gmail.com",
-              link: "mailto:ferdousgulzar543@gmail.com",
+              title: 'Email',
+              text: 'ferdousgulzar543@gmail.com',
+              link: 'mailto:ferdousgulzar543@gmail.com',
             },
             {
               icon: <FaWhatsapp className="text-3xl text-green-500 mb-3" />,
-              title: "WhatsApp",
-              text: "+92 311 753030333",
-              link: "https://wa.me/923117530303",
+              title: 'WhatsApp',
+              text: '+92 311 753030333',
+              link: 'https://wa.me/923117530303',
             },
             {
-              icon: <FaGithub className="text-3xl text-gray-700 dark:text-gray-200 mb-3" />,
-              title: "GitHub",
-              text: "github.com/codewithferdous",
-              link: "https://github.com/codewithferdous",
+              icon: (
+                <FaGithub className="text-3xl text-gray-700 dark:text-gray-200 mb-3" />
+              ),
+              title: 'GitHub',
+              text: 'github.com/codewithferdous',
+              link: 'https://github.com/codewithferdous',
             },
             {
               icon: <FaMapMarkerAlt className="text-3xl text-red-500 mb-3" />,
-              title: "Location",
-              text: "Abbottabad, Pakistan",
-              link: "",
+              title: 'Location',
+              text: 'Abbottabad, Pakistan',
+              link: '',
             },
           ].map((item, i) => (
             <motion.a
@@ -77,7 +87,7 @@ export default function Contact() {
               whileInView="visible"
               viewport={{ once: true }}
               href={item.link || undefined}
-              target={item.link ? "_blank" : undefined}
+              target={item.link ? '_blank' : undefined}
               className="flex flex-col items-center justify-center rounded-xl 
                          border border-gray-200 dark:border-white/10 
                          bg-white dark:bg-white/5 
@@ -100,7 +110,7 @@ export default function Contact() {
         <motion.form
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           viewport={{ once: true }}
           className="mt-10 flex flex-col gap-4 mx-auto w-full max-w-lg"
           action={async (formData) => {
@@ -111,7 +121,7 @@ export default function Contact() {
               return;
             }
 
-            toast.success("Email sent successfully!");
+            toast.success('Email sent successfully!');
           }}
         >
           <input

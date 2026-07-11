@@ -1,5 +1,7 @@
 'use client';
 
+import type { ExperienceItem } from '@/common/lib/data';
+
 import { motion } from 'framer-motion';
 import { ArrowLeft, X } from 'lucide-react';
 import Image from 'next/image';
@@ -8,9 +10,8 @@ import React, { useEffect, useState } from 'react';
 
 import SectionDivider from '@/common/components/shared/section-divider';
 import SectionHeading from '@/common/components/shared/section-heading';
-import { useSectionInView } from '@/common/lib/hooks';
 import { experienceData } from '@/common/lib/data';
-import type { ExperienceItem } from '@/common/lib/data';
+import { useSectionInView } from '@/common/lib/hooks';
 
 function ExperienceCard({
   item,
