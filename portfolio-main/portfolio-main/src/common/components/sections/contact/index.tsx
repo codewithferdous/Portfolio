@@ -53,7 +53,7 @@ export default function Contact() {
             {
               icon: <FaWhatsapp className="text-3xl text-green-500 mb-3" />,
               title: "WhatsApp",
-              text: "+92 311 7530303",
+              text: "+92 311 753030333",
               link: "https://wa.me/923117530303",
             },
             {
