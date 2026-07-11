@@ -12,8 +12,14 @@ interface Message {
 const INITIAL_MESSAGE: Message = {
   role: 'assistant',
   content:
-    "Hi! 👋 I'm Ferdous's portfolio assistant. Ask me anything about his skills, projects, experience, or education!",
+    "Hi! 👋 I'm Ferdous's portfolio assistant. Ask me anything about her skills, projects, experience, or education!",
 };
+
+const SUGGESTIONS = [
+  'What are her core technical skills?',
+  'Tell me about her recent projects',
+  'Why should we hire Ferdous?',
+];
 
 export default function ChatAssistant() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,11 +43,11 @@ export default function ChatAssistant() {
     }
   }, [isOpen]);
 
-  const sendMessage = async () => {
-    const trimmed = input.trim();
-    if (!trimmed || isLoading) return;
+  const sendMessage = async (textOverride?: string) => {
+    const textToSend = textOverride || input.trim();
+    if (!textToSend || isLoading) return;
 
-    const userMessage: Message = { role: 'user', content: trimmed };
+    const userMessage: Message = { role: 'user', content: textToSend };
     const updatedMessages = [...messages, userMessage];
     setMessages(updatedMessages);
     setInput('');
@@ -62,13 +68,12 @@ export default function ChatAssistant() {
           { role: 'assistant', content: data.message },
         ]);
       } else {
+        const errorMsg =
+          data?.error ||
+          'Sorry, something went wrong. Please try again in a moment.';
         setMessages((prev) => [
           ...prev,
-          {
-            role: 'assistant',
-            content:
-              'Sorry, something went wrong. Please try again in a moment.',
-          },
+          { role: 'assistant', content: errorMsg },
         ]);
       }
     } catch {
@@ -215,6 +220,27 @@ export default function ChatAssistant() {
                   </motion.div>
                 )}
 
+                {/* Suggestions for recruiters */}
+                {messages.length === 1 && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    className="flex flex-wrap gap-2 mt-2"
+                  >
+                    {SUGGESTIONS.map((suggestion, i) => (
+                      <button
+                        key={i}
+                        onClick={() => sendMessage(suggestion)}
+                        disabled={isLoading}
+                        className="rounded-full border border-cyan-200 bg-cyan-50/50 px-3 py-1.5 text-xs text-cyan-700 transition-colors hover:bg-cyan-100 hover:text-cyan-800 disabled:opacity-50 dark:border-purple-800 dark:bg-purple-900/30 dark:text-purple-300 dark:hover:bg-purple-900/50 dark:hover:text-purple-200 text-left"
+                      >
+                        {suggestion}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+
                 <div ref={messagesEndRef} />
               </div>
             </div>
@@ -233,7 +259,7 @@ export default function ChatAssistant() {
                   disabled={isLoading}
                 />
                 <motion.button
-                  onClick={sendMessage}
+                  onClick={() => sendMessage()}
                   disabled={!input.trim() || isLoading}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
