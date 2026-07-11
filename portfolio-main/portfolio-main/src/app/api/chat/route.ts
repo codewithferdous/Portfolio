@@ -3,11 +3,19 @@ import { NextRequest, NextResponse } from 'next/server';
 import { buildPortfolioContext } from '@/common/lib/portfolio-context';
 
 const GEMINI_API_URL =
-  'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+  'https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent';
 
 interface ChatMessage {
   role: 'user' | 'assistant';
   content: string;
+}
+
+interface GeminiErrorResponse {
+  error?: {
+    code?: number;
+    message?: string;
+    status?: string;
+  };
 }
 
 export async function POST(req: NextRequest) {
@@ -15,9 +23,13 @@ export async function POST(req: NextRequest) {
     const apiKey = process.env.GEMINI_API_KEY;
 
     if (!apiKey) {
+      console.error('GEMINI_API_KEY is not set in environment variables.');
       return NextResponse.json(
-        { error: 'Gemini API key is not configured.' },
-        { status: 500 },
+        {
+          error:
+            'AI assistant is not configured. Please contact the site owner.',
+        },
+        { status: 503 },
       );
     }
 
@@ -55,10 +67,48 @@ export async function POST(req: NextRequest) {
     });
 
     if (!response.ok) {
-      const errorData = await response.json().catch(() => null);
-      console.error('Gemini API error:', response.status, errorData);
+      const errorData: GeminiErrorResponse | null = await response
+        .json()
+        .catch(() => null);
+      const status = errorData?.error?.code ?? response.status;
+      const errorStatus = errorData?.error?.status ?? '';
+
+      console.error(
+        'Gemini API error:',
+        status,
+        errorStatus,
+        errorData?.error?.message,
+      );
+
+      if (status === 429 || errorStatus === 'RESOURCE_EXHAUSTED') {
+        return NextResponse.json(
+          {
+            error:
+              'The AI assistant is temporarily busy. Please wait a minute and try again.',
+          },
+          { status: 429 },
+        );
+      }
+
+      if (status === 400) {
+        return NextResponse.json(
+          { error: 'Invalid request. Please try rephrasing your question.' },
+          { status: 400 },
+        );
+      }
+
+      if (status === 403) {
+        return NextResponse.json(
+          {
+            error:
+              'AI assistant access denied. The API key may be invalid or restricted.',
+          },
+          { status: 503 },
+        );
+      }
+
       return NextResponse.json(
-        { error: 'Failed to get a response from the AI.' },
+        { error: 'Failed to get a response from the AI. Please try again.' },
         { status: 502 },
       );
     }
@@ -73,7 +123,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error('Chat API error:', error);
     return NextResponse.json(
-      { error: 'An unexpected error occurred.' },
+      { error: 'An unexpected error occurred. Please try again.' },
       { status: 500 },
     );
   }
