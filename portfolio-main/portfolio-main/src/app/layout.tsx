@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Montserrat as FontMontserrat } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 
+import ChatAssistant from '@/common/components/shared/chat-assistant';
 import Footer from '@/common/components/shared/footer';
 import Header from '@/common/components/shared/header';
 import { cn } from '@/common/lib/utils';
@@ -49,6 +50,7 @@ export default function RootLayout({
                 <ModeToggle />
               </div>
               <Toaster position="top-right" />
+              <ChatAssistant />
             </ThemeProvider>
           </ActiveSectionContextProvider>
         </div>

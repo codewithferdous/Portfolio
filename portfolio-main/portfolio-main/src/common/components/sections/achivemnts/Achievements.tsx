@@ -39,7 +39,7 @@ export function CardContent({
   );
 }
 
-interface Achievement {
+export interface Achievement {
   id: number;
   title: string;
   description: string;
@@ -48,7 +48,7 @@ interface Achievement {
   link?: string;
 }
 
-const achievements: Achievement[] = [
+export const achievementsData: Achievement[] = [
   {
     id: 1,
     title: 'Certificate of Excellence in Database',
@@ -296,13 +296,13 @@ export default function AchievementsSection() {
 
   const getCount = (cat: Category) =>
     cat === 'All'
-      ? achievements.length
-      : achievements.filter((a) => a.category.includes(cat)).length;
+      ? achievementsData.length
+      : achievementsData.filter((a) => a.category.includes(cat)).length;
 
   const filteredAchievements =
     filter === 'All'
-      ? achievements
-      : achievements.filter((a) => a.category.includes(filter));
+      ? achievementsData
+      : achievementsData.filter((a) => a.category.includes(filter));
 
   const visibleAchievements = filteredAchievements.slice(0, visibleCount);
 
