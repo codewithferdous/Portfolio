@@ -91,31 +91,23 @@ export const experienceData: ExperienceItem[] = [
     companyWebsite: 'https://elitetechhub.tech',
   },
   {
-  company: 'Google Developers Group (GDG) COMSATS Abbottabad Campus',
-
-  role: 'AI/ML Training Lead & Mentor',
-
-  duration: '1 Month (2026)',
-
-  location: 'Abbottabad, Pakistan',
-
-  companyLogo: '/images/gdgoclogo.png',
-
-  bannerImage: '/images/GDGSC.jpeg',
-
-  description:
-    'Successfully led a 1-month Artificial Intelligence and Machine Learning training program for 60+ students at COMSATS University Abbottabad Campus. Delivered practical training on AI/ML concepts, guided students through hands-on learning, and provided mentorship while promoting Artificial Intelligence and Machine Learning initiatives on campus.',
-
-  technologies: [
-    'Artificial Intelligence',
-    'Machine Learning',
-    'Python',
-    'Data Science',
-    'AI Fundamentals',
-  ],
-
-  companyWebsite: 'https://gdg.community.dev/',
-},
+    company: 'Google Developers Group (GDG) COMSATS Abbottabad Campus',
+    role: 'AI/ML Training Lead & Mentor',
+    duration: '1 Month (2026)',
+    location: 'Abbottabad, Pakistan',
+    companyLogo: '/images/gdgoclogo.png',
+    bannerImage: '/images/GDGSC.jpeg',
+    description:
+      'Successfully led a 1-month Artificial Intelligence and Machine Learning training program for 60+ students at COMSATS University Abbottabad Campus. Delivered practical training on AI/ML concepts, guided students through hands-on learning, and provided mentorship while promoting Artificial Intelligence and Machine Learning initiatives on campus.',
+    technologies: [
+      'Artificial Intelligence',
+      'Machine Learning',
+      'Python',
+      'Data Science',
+      'AI Fundamentals',
+    ],
+    companyWebsite: 'https://gdg.community.dev/',
+  },
 ];
 
 export const images = {
