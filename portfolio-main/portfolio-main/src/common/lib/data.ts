@@ -72,7 +72,7 @@ export type ExperienceItem = {
 
 export const experienceData: ExperienceItem[] = [
   {
-    company: 'Elite Tech Solutions (Pvt) Limited ASIM',
+    company: 'Elite Tech Solutions (Pvt) Limited',
     role: 'MERN Stack Development Intern',
     duration: 'Feb 2026 – Mar 2026',
     location: 'Islamabad, Pakistan',
