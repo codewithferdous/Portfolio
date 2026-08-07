@@ -50,6 +50,14 @@ export interface Certificate {
 
 export const certificatesData: Certificate[] = [
   {
+  id: 21,
+  title: 'FYP-26 Competition Participation',
+  description:
+    "Awarded by COMSATS University Islamabad, Abbottabad Campus in recognition of active participation, dedication, and valuable contribution in the FYP-26 Competition.",
+  image: './images/fyp.jpeg',
+  category: ['Studies', 'Skills'],
+},
+  {
     id: 6,
     title: 'Certificate of Accomplishment - Rosetta Stone Foundations',
     description:
@@ -170,6 +178,7 @@ export const certificatesData: Certificate[] = [
     image: './images/ushers_img.jpg',
     category: ['Activities'],
   },
+  
 ];
 
 type Category =
