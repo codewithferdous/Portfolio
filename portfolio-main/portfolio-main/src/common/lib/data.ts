@@ -90,6 +90,25 @@ export const experienceData: ExperienceItem[] = [
     ],
     companyWebsite: 'https://elitetechhub.tech',
   },
+  {
+    company: 'Elite Tech Solutions (Pvt) Limited',
+    role: 'MERN Stack Development Intern',
+    duration: 'Feb 2026 – Mar 2026',
+    location: 'Islamabad, Pakistan',
+    companyLogo: '/images/elitelogo.png',
+    bannerImage: '/images/intershipteliteTEach.png',
+    description:
+      'Successfully completed a 4-week internship and 2-week training program in MERN Stack Development. Gained practical experience building scalable web applications using MongoDB, Express.js, React, and Node.js while working on real-world development tasks and strengthening full-stack development skills.',
+    technologies: [
+      'MongoDB',
+      'Express.js',
+      'React',
+      'Node.js',
+      'JavaScript',
+      'REST APIs',
+    ],
+    companyWebsite: 'https://elitetechhub.tech',
+  },
 ];
 
 export const images = {
