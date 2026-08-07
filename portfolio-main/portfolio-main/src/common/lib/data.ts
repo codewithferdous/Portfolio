@@ -54,7 +54,7 @@ export const studyData = [
     location: 'COMSATS University Islamabad, Abbottabad Campus',
     description: 'CGPA: 3.85',
     icon: React.createElement(BookOpenIcon),
-    date: '2022 – Present',
+    date: '2022 – 2026',
   },
 ] as const;
 
