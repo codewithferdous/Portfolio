@@ -129,6 +129,26 @@ export const images = {
 
 export const projectsData = [
   {
+title: 'Hybrid Multimodal Fusion Framework for Cardiovascular Disease Detection',
+description: `An AI-assisted system for cardiovascular disease detection from ECG images using preprocessing, feature extraction, PCA, and machine learning models with a soft-voting ensemble.`,
+tags: [
+'Python',
+'Machine Learning',
+'ECG',
+'PCA',
+'Scikit-learn',
+'Explainable AI',
+'React',
+'FastAPI',
+'Supabase',
+'Healthcare AI'
+],
+category: 'AI/ML',
+imageUrl: '/images/CVD.png',
+link: 'https://github.com/codewithferdous/Cardiovascular-Disease-Detection',
+}
+,
+  {
     title: 'Hepta',
     description: `A modern frontend travel website built with React. Features elegant layouts, responsive design, and sections for destinations, travel services, and blogs.`,
     tags: ['React', 'HTML', 'CSS', 'JavaScript'],
