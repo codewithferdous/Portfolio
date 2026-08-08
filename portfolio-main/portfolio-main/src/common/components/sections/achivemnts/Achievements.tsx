@@ -50,13 +50,13 @@ export interface Achievement {
 
 export const achievementsData: Achievement[] = [
   {
-  id: 1,
-  title: 'Gold Medalist_1st Position in FYP Competition',
-  description:
-    'Awarded 1st Position and a Gold Medal in the COMSATS FYP Competition, competing against 120+ final-year projects with an AI-powered Hybrid Multimodal Framework for Cardiovascular Disease Detection using ECG analysis.',
-  image: './images/gold.jpeg',
-  category: ['Projects', 'Studies'],
-},
+    id: 1,
+    title: 'Gold Medalist_1st Position in FYP Competition',
+    description:
+      'Awarded 1st Position and a Gold Medal in the COMSATS FYP Competition, competing against 120+ final-year projects with an AI-powered Hybrid Multimodal Framework for Cardiovascular Disease Detection using ECG analysis.',
+    image: './images/gold.jpeg',
+    category: ['Projects', 'Studies'],
+  },
   {
     id: 1,
     title: 'Certificate of Excellence in Database',
