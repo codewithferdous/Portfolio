@@ -69,7 +69,7 @@ export const certificatesData: Certificate[] = [
     id: 21,
     title: 'Certificate of Recognition - Students’ Week Spring 2026',
     description:
-      'This is to certify that Ferdous Gulzar was recognized as a Lead Event Organizer during Students’ Week Spring 2026 at COMSATS University Islamabad, Abbottabad Campus, in recognition of leadership, event coordination, teamwork, dedication, and valuable contribution to the successful organization of university activities.',
+      'This is to certify that Ferdous Gulzar was recognized as a Lead Event Organizer during Students’ Week Spring 2026 at CUIATD, in recognition of leadership, event coordination,  and valuable contribution to the successful organization of university activities.',
     image: './images/soft.jpeg',
     category: ['Activities'],
   },
