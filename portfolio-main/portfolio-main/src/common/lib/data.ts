@@ -52,7 +52,7 @@ export const studyData = [
   {
     title: 'BS Software Engineering (8th Semester)',
     location: 'COMSATS University Islamabad, Abbottabad Campus',
-    description: 'CGPA: 3.85',
+    description: 'CGPA: 3.87',
     icon: React.createElement(BookOpenIcon),
     date: '2022 – 2026',
   },
