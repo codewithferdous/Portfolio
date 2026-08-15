@@ -58,44 +58,61 @@ export const achievementsData: Achievement[] = [
     category: ['Projects', 'Studies'],
   },
   {
-    id: 1,
-    title: 'Certificate of Excellence in Database',
+    id: 2,
+    title: 'Campus Honor Roll Award in 8th Semester',
     description:
-      'Won the Inter-Subject Project Competition in the subject of Database at COMSATS University Islamabad, Abbottabad Campus, on 10th January 2025.',
-    image: './images/Certificate of Excellence in Database.jpg',
-    category: ['Studies', 'Projects'],
+      'Recognized in the Campus Honor Roll for achieving a perfect SGPA of 4.0/4.0 in the 8th Semester (Spring 2026), demonstrating outstanding academic performance and consistency.',
+    image: './images/8thSemester.png',
+    category: ['Studies'],
   },
   {
     id: 3,
+    title: 'Campus Honor Roll Award in 7th Semester',
+    description:
+      'Recognized in the Campus Honor Roll for achieving a perfect SGPA of 4.0/4.0 in the 7th Semester (Fall 2025), demonstrating outstanding academic performance and consistency.',
+    image: './images/7thSemester.png',
+    category: ['Studies'],
+  },
+  {
+    id: 4,
+    title: 'Campus Honor Roll Certificate 6th Semester',
+    description:
+      'Awarded by COMSATS University Islamabad (CUI), Abbottabad Campus for outstanding academic performance, achieving a perfect SGPA of 4.0/4.0 in the 6th Semester (Spring 2025) of the BS Software Engineering program.',
+    image: './images/campus.jpeg',
+    category: ['Skills', 'Studies'],
+  },
+  {
+    id: 5,
     title: 'Campus Honor Roll Award in Fifth Semester',
     description:
-      'Recognized in the Campus Honor Roll for securing a perfect SGPA of 3.88/4.0 in the Fifth Semester (Fall 2024).',
+      'Recognized by COMSATS University Islamabad (CUI), Abbottabad Campus for outstanding academic performance, achieving an excellent SGPA of 3.88/4.0 in the Fifth Semester (Fall 2024) of the BS Software Engineering program.',
     image: './images/Campus Honor Roll Award in Fifth Semester.jpg',
     category: ['Studies'],
   },
   {
-    id: 2,
+    id: 6,
     title: 'Campus Honor Roll Award in 3rd Semester',
     description:
-      'Recognized in the Campus Honor Roll for securing a perfect SGPA of 4.0/4.0 in the 3rd Semester (Fall 2023).',
+      'Recognized by COMSATS University Islamabad (CUI), Abbottabad Campus for outstanding academic performance, achieving a perfect SGPA of 4.0/4.0 in the 3rd Semester (Fall 2023) of the BS Software Engineering program.',
     image: './images/Campus Honor Roll Award in 3rd Semester.png',
     category: ['Studies'],
   },
   {
-    id: 5,
-    title: 'Certificate of Excellence in Computer Network',
+    id: 7,
+    title: 'Certificate of Excellence in Database',
     description:
-      'Runner-up in the Inter-Subject Project Competition in Computer Network on 10th January 2025.',
-    image: './images/Certificate of Excellence in Computer Network.png',
+      'Awarded a Certificate of Excellence at COMSATS University Islamabad (CUI), Abbottabad Campus for winning the Inter-Subject Project Competition in Database on 10th January 2025.',
+    image: './images/Certificate of Excellence in Database.jpg',
     category: ['Studies', 'Projects'],
   },
+
   {
-    id: 19,
-    title: 'Campus Honor Roll Certificate 6th Semester',
+    id: 8,
+    title: 'Certificate of Excellence in Computer Network',
     description:
-      'Awarded by COMSATS University Islamabad (CUI), Abbottabad Campus in recognition of outstanding academic performance. Achieved a perfect SGPA of 4.0/4.0 in the 6th Semester (Spring 2025) of the Bachelor of Science in Software Engineering program, reflecting dedication, consistency, and academic excellence.',
-    image: './images/campus.jpeg',
-    category: ['Skills', 'Studies'],
+      'Awarded a Certificate of Excellence at COMSATS University Islamabad (CUI), Abbottabad Campus for securing Runner-up position in the Inter-Subject Project Competition in Computer Network on 10th January 2025.',
+    image: './images/Certificate of Excellence in Computer Network.png',
+    category: ['Studies', 'Projects'],
   },
 ];
 
