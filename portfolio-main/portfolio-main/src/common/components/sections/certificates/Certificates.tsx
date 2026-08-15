@@ -58,53 +58,12 @@ export const certificatesData: Certificate[] = [
     category: ['Studies', 'Skills'],
   },
   {
-    id: 6,
-    title: 'Certificate of Accomplishment - Rosetta Stone Foundations',
-    description:
-      'Successfully completed Rosetta Stone Foundations for English (American), covering Levels 1, 2, 3, 4, and 5.',
-    image: './images/Rosetta Stone Foundations.jpg',
-    category: ['Studies', 'Skills'],
-  },
-  {
-    id: 21,
-    title: 'Certificate of Recognition - Students’ Week Spring 2026',
-    description:
-      'This is to certify that Ferdous Gulzar was recognized as a Lead Event Organizer during Students’ Week Spring 2026 at CUIATD, in recognition of leadership, event coordination,  and valuable contribution to the successful organization of university activities.',
-    image: './images/soft.jpeg',
-    category: ['Activities'],
-  },
-  {
-    id: 7,
-    title: 'Certificate of Course Completion - Spoken English',
-    description:
-      'Awarded by NS Training for the successful completion of a Spoken English course on 30th July 2023.',
-    image: './images/Spoken English.jpg',
-    category: ['Studies', 'Skills'],
-  },
-  {
-    id: 8,
-    title: 'Certificate of Appreciation - PNP Internship Program',
-    description:
-      'Recognized by the Press Network of Pakistan for remarkable contribution during the PNP Internship Program (Winter 2023–24).',
-    image: './images/PNP Internship Program.jpg',
-    category: ['Internship'],
-  },
-  {
     id: 9,
     title: 'Certificate of Appreciation - Internship in MERN Stack',
     description:
       'Completed a two-month internship in MERN Stack at Ezitech Learning Institute (01-June-2024 to 01-Aug-2024) with full attendance. Worked on projects including Attendance Management System in React, Hepta Travelling Website, and Netflix Clone. Recognized for being attentive, punctual, and delivering high-quality work.',
     image: './images/Internship in MERN Stack.jpg',
     category: ['Internship', 'Skills'],
-  },
-  {
-    id: 10,
-    title:
-      'Certificate of Participation - Global Workshop on Teamwork and Leadership',
-    description:
-      'This is to certify that Ferdous Gulzar has successfully participated in the online Global Workshop on Teamwork and Leadership, organized by Nobel Learning PBC on May 24, 2025. Facilitators: Andrew Sachs and Mykola Chernohorov. Organized by Nobel Learning PBC. More info: nobelnavigators.com/internship/',
-    image: './images/mm.jpg',
-    category: ['Activities', 'Skills', 'Internship'],
   },
   {
     id: 13,
@@ -115,11 +74,19 @@ export const certificatesData: Certificate[] = [
     category: ['Skills', 'Studies'],
   },
   {
-    id: 14,
-    title: ' Certificate of Completion - Introduction to AI',
+    id: 18,
+    title: 'Workshop on Deep Learning and NLP',
     description:
-      "Awarded by Google and delivered through Coursera in recognition of successful completion of the course 'Introduction to AI'. The course provided foundational knowledge of artificial intelligence concepts, applications, and real-world use cases, building a strong base for further study and practical implementation of AI technologies.",
-    image: './images/INTRO to ai.jpeg',
+      'Awarded a Certificate of Participation by the Robotics Club, COMSATS University Islamabad, for successfully participating in a workshop on Deep Learning and Natural Language Processing.',
+    image: './images/nlp .jpg',
+    category: ['Studies', 'Skills'],
+  },
+  {
+    id: 21,
+    title: 'Demystifying Deep Learning Workshop',
+    description:
+      'Successfully completed a four-day intensive workshop titled "Demystifying Deep Learning – An Autumn Workshop," . Gained a solid understanding of core deep learning concepts, neural networks, and real-world AI applications, enhancing analytical thinking and exposure to modern machine learning technologies.',
+    image: './images/deep learning.jpeg',
     category: ['Skills'],
   },
   {
@@ -139,21 +106,58 @@ export const certificatesData: Certificate[] = [
     category: ['Studies', 'Skills'],
   },
   {
-    id: 18,
-    title: 'Workshop on Deep Learning and NLP',
+    id: 6,
+    title: 'Certificate of Accomplishment - Rosetta Stone Foundations',
     description:
-      'Awarded a Certificate of Participation by the Robotics Club, COMSATS University Islamabad, for successfully participating in a workshop on Deep Learning and Natural Language Processing.',
-    image: './images/nlp .jpg',
+      'Successfully completed Rosetta Stone Foundations for English (American), covering Levels 1, 2, 3, 4, and 5.',
+    image: './images/Rosetta Stone Foundations.jpg',
+    category: ['Studies', 'Skills'],
+  },
+
+  {
+    id: 7,
+    title: 'Certificate of Course Completion - Spoken English',
+    description:
+      'Awarded by NS Training for the successful completion of a Spoken English course on 30th July 2023.',
+    image: './images/Spoken English.jpg',
     category: ['Studies', 'Skills'],
   },
   {
     id: 21,
-    title: 'Demystifying Deep Learning Workshop',
+    title: 'Certificate of Recognition - Students’ Week Spring 2026',
     description:
-      'Successfully completed a four-day intensive workshop titled "Demystifying Deep Learning – An Autumn Workshop," . Gained a solid understanding of core deep learning concepts, neural networks, and real-world AI applications, enhancing analytical thinking and exposure to modern machine learning technologies.',
-    image: './images/deep learning.jpeg',
+      'This is to certify that Ferdous Gulzar was recognized as a Lead Event Organizer during Students’ Week Spring 2026 at CUIATD, in recognition of leadership, event coordination,  and valuable contribution to the successful organization of university activities.',
+    image: './images/soft.jpeg',
+    category: ['Activities'],
+  },
+  {
+    id: 8,
+    title: 'Certificate of Appreciation - PNP Internship Program',
+    description:
+      'Recognized by the Press Network of Pakistan for remarkable contribution during the PNP Internship Program (Winter 2023–24).',
+    image: './images/PNP Internship Program.jpg',
+    category: ['Internship'],
+  },
+
+  {
+    id: 10,
+    title:
+      'Certificate of Participation - Global Workshop on Teamwork and Leadership',
+    description:
+      'This is to certify that Ferdous Gulzar has successfully participated in the online Global Workshop on Teamwork and Leadership, organized by Nobel Learning PBC on May 24, 2025. Facilitators: Andrew Sachs and Mykola Chernohorov. Organized by Nobel Learning PBC. More info: nobelnavigators.com/internship/',
+    image: './images/mm.jpg',
+    category: ['Activities', 'Skills', 'Internship'],
+  },
+
+  {
+    id: 14,
+    title: ' Certificate of Completion - Introduction to AI',
+    description:
+      "Awarded by Google and delivered through Coursera in recognition of successful completion of the course 'Introduction to AI'. The course provided foundational knowledge of artificial intelligence concepts, applications, and real-world use cases, building a strong base for further study and practical implementation of AI technologies.",
+    image: './images/INTRO to ai.jpeg',
     category: ['Skills'],
   },
+
   {
     id: 20,
     title: 'Maximize Productivity With AI Tools',
