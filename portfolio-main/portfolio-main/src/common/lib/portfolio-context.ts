@@ -82,6 +82,7 @@ const CERTIFICATIONS = [
 const CONTACT = `Email: ferdousgulzar543@gmail.com
 WhatsApp: +92 311 7530303
 GitHub: github.com/codewithferdous
+CV: https://drive.google.com/file/d/1Kl7Be5mDabAzc9kuA4jiRAVMoZksPKY8/view?usp=drive_link
 Location: Abbottabad, Pakistan`;
 
 export function buildPortfolioContext(): string {
