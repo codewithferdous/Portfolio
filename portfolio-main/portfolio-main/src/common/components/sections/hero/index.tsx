@@ -76,7 +76,7 @@ export default function Hero() {
               {/* Download CV */}
               <a
                 className="borderBlack group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-7 py-3 text-black outline-none transition hover:bg-gray-100 sm:w-auto"
-                href="https://drive.google.com/file/d/1Kl7Be5mDabAzc9kuA4jiRAVMoZksPKY8/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1GC1BTZw-9qhLvh3dqLxs1Ic0ewRR2RQu/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
