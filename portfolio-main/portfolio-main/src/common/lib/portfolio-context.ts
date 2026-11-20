@@ -46,7 +46,8 @@ const PROJECTS = [
 const EDUCATION = [
   'Matric (Science) at Squadron Leader Masood-ul-Haq (Shaheed) Girls Model Higher Secondary School, Bagh (2016 – 2018) — Percentage: 89.5%',
   'FSC (Pre-Medical) at Orion Model Science College, Bagh AJ (2019 – 2021) — Percentage: 71.2%',
-  'BS Software Engineering (8th Semester) at COMSATS University Islamabad, Abbottabad Campus (2022 – Present) — CGPA: 3.87',
+  'BS Software Engineering at COMSATS University Islamabad, Abbottabad Campus (2022 – 2026) — CGPA: 3.87 | Bronze Medalist in Batch & Gold Medalist in FYP',
+  'MS in Artificial Intelligence at COMSATS University Islamabad, Islamabad Campus (2026 – 2028) — In Progress',
 ];
 
 const EXPERIENCE = [

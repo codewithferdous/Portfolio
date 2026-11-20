@@ -50,11 +50,18 @@ export const studyData = [
     date: '2019 – 2021',
   },
   {
-    title: 'BS Software Engineering (8th Semester)',
+    title: 'BS Software Engineering',
     location: 'COMSATS University Islamabad, Abbottabad Campus',
-    description: 'CGPA: 3.87',
+    description: 'CGPA: 3.87 | Bronze Medalist in Batch & Gold Medalist in FYP',
     icon: React.createElement(BookOpenIcon),
     date: '2022 – 2026',
+  },
+  {
+    title: 'MS in Artificial Intelligence',
+    location: 'COMSATS University Islamabad, Islamabad Campus',
+    description: 'In Progress',
+    icon: React.createElement(BookOpenIcon),
+    date: '2026 – 2028',
   },
 ] as const;
 
